@@ -1,0 +1,189 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# TEHISINTELLEKTI ALUSED — MkDocs Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+
+site_name: Tehisintellekti alused
+site_url: https://optalvik.github.io/ti/
+site_description: >-
+  Algajasõbralik kursus tehisintellekti tööriistadest ja agentlikust töövoogust.
+  IT-süsteemide nooremspetsialist tase 4.
+site_author: Maria Talvik
+copyright: >-
+  &copy; 2025–2026 Maria Talvik · 
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+
+repo_url: https://github.com/optalvik/ti
+repo_name: optalvik/ti
+edit_uri: edit/main/docs/
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# THEME
+# ═══════════════════════════════════════════════════════════════════════════════
+theme:
+  name: material
+  custom_dir: overrides
+  language: et
+  logo: assets/logo_kursus.svg
+  favicon: assets/favicon.png
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Lülitu tumedale
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Lülitu heledaks
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+  icon:
+    repo: fontawesome/brands/github
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PLUGINS
+# ═══════════════════════════════════════════════════════════════════════════════
+plugins:
+  - search:
+      lang:
+        - et
+        - en
+  - tags
+  - glightbox
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MARKDOWN EXTENSIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# NAVIGATION
+# ═══════════════════════════════════════════════════════════════════════════════
+nav:
+  - Avaleht: index.md
+  - Teooria:
+    - teooria/index.md
+    - "0. Kuidas selle kursusega töötada": teooria/00_kuidas_kursusega_tootada.md
+    - "1. Sissejuhatus: mis on tehisintellekt?": teooria/01_sissejuhatus.md
+    - "2. Masinõppe alused": teooria/02_masinoppe_alused.md
+    - "3. Suurte keelemudelite (LLM) taust": teooria/03_llm_taust.md
+    - "4. Prompt engineering": teooria/04_prompt_engineering.md
+    - "5. AI tööriistade ülevaade": teooria/05_tooriistad.md
+    - "6. Koodi genereerimine ja AI abilised": teooria/06_koodi_genereerimine.md
+    - "7. Agentlik töövoog": teooria/07_agentlik_toovoog.md
+    - "8. Andmed, algoritmid ja otsinguülesanded": teooria/08_andmed_algoritmid.md
+    - "9. Eetika, turvalisus ja piirangud": teooria/09_eetika_turvalisus.md
+    - "10. AI tulevikutrendid": teooria/10_tulevikutrendid.md
+  - Praktikumid:
+    - praktikumid/index.md
+    - "Praktikum 1: Vestlus LLM-iga": praktikumid/praktikum_01.md
+    - "Praktikum 2: Prompt engineering": praktikumid/praktikum_02.md
+    - "Praktikum 3: Perplexity — AI-põhine infootsing": praktikumid/praktikum_03.md
+    - "Praktikum 4: NotebookLM — allikate analüüs": praktikumid/praktikum_04.md
+    - "Praktikum 5: Teachable Machine — masinõpe brauseris": praktikumid/praktikum_05.md
+    - "Praktikum 6: ChatGPT — koodi genereerimine": praktikumid/praktikum_06.md
+  - Kursuse info: kursuse_info.md
+  - Allikad: allikad.md
+  - Sildid: tags.md
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EXTRA
+# ═══════════════════════════════════════════════════════════════════════════════
+extra:
+  status:
+    new: Uus!
+    deprecated: Aegunud
+
+  tags:
+    AI: ai
+    LLM: llm
+    Prompt: prompt
+    Eetika: eetika
+    Agendid: agendid
+    Praktikum: lab
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/optalvik
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/mariatalvik
+      name: LinkedIn
+
+  consent:
+    title: Küpsised
+    description: >-
+      See leht kasutab küpsiseid ainult otsingu ja teemavaliku meeldejätmiseks.
+    actions:
+      - accept
+      - reject
+      - manage
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
