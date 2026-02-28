@@ -1,6 +1,7 @@
 ---
 tags:
   - Praktikum
+  - Masinõpe
 ---
 
 # Praktikum 5: Masinõpe brauseris — Teachable Machine

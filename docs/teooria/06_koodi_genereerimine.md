@@ -2,6 +2,8 @@
 tags:
   - Kood
   - Tööriistad
+  - AI
+  - LLM
 ---
 
 # 6. AI-abilised koodi genereerimisel

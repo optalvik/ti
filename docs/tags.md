@@ -1,6 +1,6 @@
 ---
-tags:
-  - AI
+hide:
+  - tags
 ---
 
 # Sildid

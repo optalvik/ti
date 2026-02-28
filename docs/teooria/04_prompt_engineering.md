@@ -1,6 +1,8 @@
 ---
 tags:
   - Prompt
+  - AI
+  - LLM
 ---
 
 # 4. Promptimise tehnikad

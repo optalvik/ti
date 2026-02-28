@@ -1,6 +1,8 @@
 ---
 tags:
   - Praktikum
+  - AI
+  - Prompt
 ---
 
 # Praktikum 1: Loo oma AI-abiline

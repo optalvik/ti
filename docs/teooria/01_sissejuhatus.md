@@ -1,6 +1,7 @@
 ---
 tags:
   - AI
+  - Masinõpe
 ---
 
 # 1. Sissejuhatus: mis on tehisintellekt?

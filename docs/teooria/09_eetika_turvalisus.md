@@ -2,6 +2,7 @@
 tags:
   - Eetika
   - Turvalisus
+  - AI
 ---
 
 # 9. Eetika ja turvalisus

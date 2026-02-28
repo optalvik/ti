@@ -1,6 +1,8 @@
 ---
 tags:
   - Praktikum
+  - Prompt
+  - Turvalisus
 ---
 
 # Praktikum 2: IT Helpdesk simulaator

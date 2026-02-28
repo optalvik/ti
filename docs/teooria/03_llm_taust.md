@@ -2,6 +2,8 @@
 tags:
   - LLM
   - Transformer
+  - AI
+  - Masinõpe
 ---
 
 # 3. Suurte keelemudelite taust

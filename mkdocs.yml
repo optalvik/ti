@@ -72,7 +72,8 @@ plugins:
       lang:
         - et
         - en
-  - tags
+  - tags:
+      tags_file: tags.md
   - glightbox
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -161,8 +162,17 @@ extra:
     AI: ai
     LLM: llm
     Prompt: prompt
-    Eetika: eetika
+    Masinõpe: masinope
+    Transformer: transformer
+    Tööriistad: tooriistad
+    Kood: kood
     Agendid: agendid
+    MCP: mcp
+    Algoritmid: algoritmid
+    Andmestruktuurid: andmestruktuurid
+    Eetika: eetika
+    Turvalisus: turvalisus
+    Trendid: trendid
     Praktikum: lab
 
   social:

@@ -2,6 +2,8 @@
 tags:
   - Algoritmid
   - Andmestruktuurid
+  - AI
+  - Masinõpe
 ---
 
 # 8. Andmestruktuurid ja algoritmid AI kontekstis

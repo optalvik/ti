@@ -1,6 +1,8 @@
 ---
 tags:
   - Praktikum
+  - Kood
+  - AI
 ---
 
 # Praktikum 6: Lõpuprojekt — ehita oma IT-tööriist

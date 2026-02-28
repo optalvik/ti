@@ -1,6 +1,8 @@
 ---
 tags:
   - Praktikum
+  - AI
+  - Tööriistad
 ---
 
 # Praktikum 3: Tehno-detektiiv

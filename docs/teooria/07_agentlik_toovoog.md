@@ -2,6 +2,8 @@
 tags:
   - Agendid
   - MCP
+  - AI
+  - Tööriistad
 ---
 
 # 7. Agentlik töövoog

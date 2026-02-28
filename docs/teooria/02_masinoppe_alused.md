@@ -1,6 +1,7 @@
 ---
 tags:
   - Masinõpe
+  - AI
 ---
 
 # 2. Masinõppe alused

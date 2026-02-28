@@ -2,6 +2,8 @@
 tags:
   - Tööriistad
   - LLM
+  - AI
+  - Prompt
 ---
 
 # 5. AI tööriistad
