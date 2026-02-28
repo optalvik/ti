@@ -3,207 +3,174 @@ tags:
   - Praktikum
 ---
 
-# Praktikum 2: Prompt engineering praktikas
+# Praktikum 2: IT Helpdesk simulaator
 
-Selles praktikumis õpid, kuidas küsimuse sõnastus mõjutab AI vastuse kvaliteeti. Sa proovid erinevaid tehnikaid ja näed ise, milline vahe on halval ja heal promptil.
+Selles praktikumis lahendad kolm reaalset IT-tugiprobleemi AI abiga. Sa ei õpi promptimist teooria kaudu — sa õpid seda **tehes**, sest iga juhtum nõuab paremat küsimist, et saada parem vastus.
 
 !!! abstract "Eesmärgid"
-    Selle praktikumi läbimise järel:
+    Selle praktikumi lõpuks:
 
-    - Oskad eristada head prompti halvast
-    - Oskad kasutada zero-shot, few-shot ja chain-of-thought tehnikaid
-    - Tead, kuidas roll ja kontekst mõjutavad vastust
-    - Oskad koostada struktureeritud prompte
+    - Oskad AI-d kasutada IT-probleemide diagnoosimiseks
+    - Tead, kuidas küsimuse sõnastus mõjutab vastuse kvaliteeti
+    - Oled lahendanud kolm IT-juhtumit ja dokumenteerinud lahenduskäigu
+
+!!! info "Vajalik konto"
+    - **ChatGPT:** [chat.openai.com](https://chat.openai.com) või **Claude:** [claude.ai](https://claude.ai)
 
 ---
 
-## Osa 1: Halb prompt vs hea prompt
+## Kuidas see töötab
 
-### Ülesanne 1: Võrdle tulemusi
+Sa oled IT-tugiisik. Sulle tulevad kolm piletit (ingl *ticket*). Iga pileti puhul:
 
-Esita ChatGPT-le kõigepealt halb prompt:
+1. Loe probleemikirjeldust
+2. Kasuta AI-d, et leida lahendus
+3. Kui esimene vastus pole piisav — **küsi paremini**
+4. Dokumenteeri lahenduskäik
+
+!!! tip "Promptimise nipp"
+    Mida rohkem konteksti annad, seda parem vastus tuleb. Ära kirjuta lihtsalt "printer ei tööta" — kirjelda, mis juhtus, millal, mis süsteem, mida juba prooviti.
+
+---
+
+## Juhtum 1: Parool ei tööta
+
+### Pilet
+
+> **Saatja:** Mari, raamatupidamine
+>
+> **Teema:** Ei saa sisse logida
+>
+> **Kirjeldus:** Tulin hommikul tööle ja mu parool ei tööta enam. Eile õhtul töötas veel. Proovsin mitu korda, nüüd ütleb "konto lukustatud". Mul on homme aruande tähtaeg, palun aidake kiiresti!
+
+### Sinu ülesanne
+
+**Samm 1:** Esita AI-le esimene küsimus selle probleemi kohta. Kirjuta oma küsimus üles.
+
+**Samm 2:** Loe AI vastust. Kas said konkreetse lahenduskäigu? Kui vastus oli liiga üldine, proovi täpsemalt:
 
 ```text
-Räägi mulle võrkudest.
+Kasutaja ei saa Windows domeeni sisse logida. Parool töötas eile,
+täna hommikul mitte. Konto on nüüd lukustatud (Active Directory).
+Mis on kõige tõenäolisemad põhjused ja kuidas samm-sammult
+lahendada? Ma olen tugitiimi liige ja mul on AD admin-ligipääs.
 ```
 
-Seejärel esita hea prompt:
+**Samm 3:** Täida lahenduskaart:
 
-```text
-Selgita lihtsalt ja konkreetselt, mis vahe on LAN-il ja WAN-il. 
-Too mõlemale üks igapäevaelu näide. Vasta eesti keeles, 
-maksimaalselt 150 sõna.
-```
-
-Võrdle vastuseid:
-
-| Aspekt | Halb prompt | Hea prompt |
-|---|---|---|
-| Kas vastus on fookuses? | | |
-| Kas pikkus on sobiv? | | |
-| Kas sain, mida tahtsin? | | |
-
-!!! tip "Reegel"
-    Mida täpsem küsimus, seda parem vastus. AI ei oska mõtteid lugeda — sa pead ütlema, mida tahad.
-
-### Ülesanne 2: Ise parandamine
-
-Siin on kolm halba prompti. Kirjuta igaühe kõrvale parem versioon ja testi mõlemat:
-
-| Halb prompt | Sinu parem versioon |
+| Väli | Sinu vastus |
 |---|---|
-| "Mis on DNS?" | |
-| "Kirjuta kood." | |
-| "Aita mind." | |
+| Esimene küsimus AI-le | |
+| Kas esimene vastus oli piisav? | |
+| Mitu päringut läks vaja? | |
+| Põhjus | |
+| Lahendus (lühidalt) | |
+| Mida ütled Marile? | |
 
 ---
 
-## Osa 2: Zero-shot vs few-shot
+## Juhtum 2: Võrk on aeglane
 
-### Ülesanne 3: Zero-shot
+### Pilet
 
-Anna AI-le ülesanne ilma näideteta:
+> **Saatja:** Tõnis, müügiosakond
+>
+> **Teema:** Internet on kohutavalt aeglane
+>
+> **Kirjeldus:** Viimased paar päeva on internet meie osakonnas mega aeglane. Lehed laadivad igavesti, videokõned katkevad. Teistes osakondades paistab OK olevat. Meil on siin 8 inimest ja kõik kasutavad WiFi-t.
 
-```text
-Klassifitseeri järgmised IT-probleemid kategooriatesse 
-(riistvara / tarkvara / võrk):
+### Sinu ülesanne
 
-1. Printer ei prindi
-2. Excel jookseb kokku
-3. WiFi ei ühenda
-4. Ekraan on must
-5. VPN ei tööta
-```
+See on keerulisem juhtum — põhjuseid võib olla mitu. Siin pead AI-lt küsima **samm-sammulise** diagnoosimisplaani.
 
-### Ülesanne 4: Few-shot
+**Samm 1:** Sõnasta probleem AI-le nii, et ta saaks anda struktureeritud veaotsinguplaani. Vihje — lisa:
 
-Nüüd anna sama ülesanne **näidetega**:
+- Mis on olukord (8 inimest, WiFi, üks osakond)
+- Mis on sümptomid (aeglane, videokõned katkevad)
+- Mis on juba teada (teistes osakondades OK)
 
-```text
-Klassifitseeri IT-probleemid kategooriatesse. Siin on näited:
+**Samm 2:** AI annab tõenäoliselt pika nimekirja. Vali **kolm kõige tõenäolisemat põhjust** ja küsi iga kohta täpsemalt.
 
-- "Hiir ei tööta" → Riistvara
-- "Windows ei käivitu" → Tarkvara  
-- "E-post ei saabu" → Võrk
+**Samm 3:** Täida lahenduskaart:
 
-Nüüd klassifitseeri:
-1. Printer ei prindi
-2. Excel jookseb kokku
-3. WiFi ei ühenda
-4. Ekraan on must
-5. VPN ei tööta
-```
-
-Võrdle: kas few-shot andis täpsemaid tulemusi? Kas formaat oli ühtlasem?
-
----
-
-## Osa 3: Chain-of-thought
-
-### Ülesanne 5: Samm-sammuline mõtlemine
-
-Esita kõigepealt tavaline küsimus:
-
-```text
-Meil on kontoris 50 arvutit. Iga arvuti vajab IP-aadressi. 
-Millist alamvõrgumaski peaksime kasutama?
-```
-
-Seejärel sama küsimus chain-of-thought tehnikaga:
-
-```text
-Meil on kontoris 50 arvutit. Iga arvuti vajab IP-aadressi. 
-Millist alamvõrgumaski peaksime kasutama?
-
-Mõtle samm-sammult:
-1. Mitu IP-aadressi on vaja?
-2. Milline on väikseim alamvõrk, kuhu see arv mahub?
-3. Milline mask sellele vastab?
-```
-
-Võrdle: kas samm-sammuline versioon andis põhjalikuma vastuse?
-
-!!! info "Millal kasutada chain-of-thought"
-    See tehnika on kasulik, kui ülesanne nõuab **loogikat või arvutamist**. Lihtsa faktilise küsimuse puhul ("Mis on DNS?") pole sellest kasu.
-
----
-
-## Osa 4: Rolli andmine
-
-### Ülesanne 6: Rolliprompt
-
-Proovi sama küsimust erinevate rollidega:
-
-**Ilma rollita:**
-
-```text
-Selgita, mis on tulemüür.
-```
-
-**IT-õpetaja roll:**
-
-```text
-Sa oled kogenud IT-õpetaja, kes selgitab asju lihtsalt 
-ja kasutab igapäevaelu analoogiaid. 
-
-Selgita 17-aastasele õpilasele, mis on tulemüür.
-```
-
-**Süsteemiadministraatori roll:**
-
-```text
-Sa oled kogenud süsteemiadministraator, kes annab 
-konkreetseid tehnilisi juhiseid.
-
-Selgita, mis on tulemüür ja kuidas seda Linuxis 
-iptables'iga seadistada.
-```
-
-Pane tähele, kuidas roll muudab vastuse stiili, detailsust ja keerukust.
-
----
-
-## Osa 5: Struktureeritud prompt
-
-### Ülesanne 7: Ehita prompt üles
-
-Koosta prompt neljast osast:
-
-```text
-ROLL: Sa oled IT-tugitiimi spetsialist.
-
-KONTEKST: Meie ettevõttes on 30 töötajat. Igal hommikul 
-kurdavad mõned, et internet on aeglane. Probleem kaob 
-lõunaks.
-
-ÜLESANNE: Koosta veaotsingu plaan — millised sammud peaksin 
-läbi tegema, et probleemi põhjus leida?
-
-FORMAAT: Nummerdatud sammud, iga samm max 2 lauset. 
-Maksimaalselt 10 sammu.
-```
-
-Hinda tulemust:
-
-| Kriteerium | Hinnang (1–5) |
+| Väli | Sinu vastus |
 |---|---|
-| Kas sammud on loogilises järjekorras? | |
-| Kas juhised on konkreetsed? | |
-| Kas formaat vastab nõudele? | |
-| Kas sa saaksid neid päriselt järgida? | |
+| Sinu prompt (kopeeri siia) | |
+| Top 3 tõenäolisemat põhjust | 1. / 2. / 3. |
+| Diagnoosimise sammud | |
+| Millist tööriista kasutaksid kontrollimiseks? | |
+| Mida ütled Tõnisele? | |
+
+!!! warning "Kontrolli AI vastust"
+    AI võib soovitada käske või tööriistu. **Kontrolli**, kas need on päris ja kas need teevad seda, mida AI väidab. Näiteks: kui AI soovitab `iperf3`, kontrolli, mis see on, enne kui kliendile soovitad.
 
 ---
 
-## Osa 6: Loo oma prompt
+## Juhtum 3: Kahtlane e-kiri
 
-### Ülesanne 8: Vaba katsetamine
+### Pilet
 
-Vali üks IT-teema, mis sind huvitab, ja koosta struktureeritud prompt, mis sisaldab rolli, konteksti, ülesannet ja formaati.
+> **Saatja:** Kätlin, personaliosakond
+>
+> **Teema:** Kas see on pettus?
+>
+> **Kirjeldus:** Sain just e-kirja, kus Microsoft palub mul oma parooli uuendada. Link viib lehele `microsoft-security-update.com`. E-kiri näeb päris välja — on Microsoft'i logo ja kõik. Aga midagi tundub kahtlane. Ma ei vajutanud veel midagi.
+>
+> **Manusena:** [screenshot e-kirjast]
 
-Testi oma prompti. Kui tulemus pole rahuldav, muuda üht elementi korraga ja testi uuesti. Kirjuta üles, milline muudatus andis parima tulemuse.
+### Sinu ülesanne
 
-!!! warning "Oluline õppetund"
-    Prompt engineering on **iteratiivne** protsess. Harva saab esimene prompt täiuslikku vastust. Sa pead katsetama, kohandama ja uuesti proovima — täpselt nagu koodi debuggimine.
+See juhtum nõuab turvaanalüüsi. Sa pead AI-lt küsima nii tehnilist analüüsi kui ka soovitusi kasutajale.
+
+**Samm 1:** Kirjelda olukord AI-le ja küsi analüüsi. Lisa kõik detailid piletist.
+
+**Samm 2:** Küsi AI-lt konkreetseid kontrollimise samme:
+
+```text
+Kuidas kontrollida, kas e-kiri on phishing? Anna mulle konkreetne
+checklist, mida IT-tugiisik peaks kontrollima. Kasutaja sai kirja,
+mis näeb välja nagu Microsoft'i paroolimeeldetuletus, aga
+domeeninimi on microsoft-security-update.com.
+```
+
+**Samm 3:** Koosta Kätlinile vastus — mitte tehniline IT-keel, vaid selge ja rahulik juhis.
+
+**Samm 4:** Täida lahenduskaart:
+
+| Väli | Sinu vastus |
+|---|---|
+| Kas tegemist on phishinguga? | Jah / Ei / Tõenäoliselt |
+| Mis andis ära? (tunnused) | |
+| Kontrollimise sammud | |
+| Vastus Kätlinile (sinu sõnadega) | |
+| Mida peaks organisatsioon tegema? | |
+
+---
+
+## Kokkuvõte ja analüüs
+
+### Mis sa promptimisest õppisid?
+
+Vaata tagasi oma kolme juhtumi päringuid ja vasta:
+
+1. **Kontekst:** millal andis rohkem taustinfot parema vastuse?
+2. **Formaat:** millal aitas, kui palusid konkreetset formaati (sammud, checklist)?
+3. **Roll:** kas AI-le rolli andmine ("sa oled IT-tugiisik") muutis vastust?
+4. **Iteratsioon:** mitu korda pidid keskmiselt küsimust ümber sõnastama?
+
+### Promptimise tehnikad, mida kasutasid
+
+Märgi ära, milliseid tehnikaid sa (teadlikult või kogemata) kasutasid:
+
+- [ ] **Konteksti andmine** — lisasid taustainfot (süsteem, kasutaja, olukord)
+- [ ] **Rolli määramine** — ütlesid AI-le, kes ta on
+- [ ] **Formaadi määramine** — palusid konkreetset väljundit (sammud, checklist)
+- [ ] **Samm-sammuline mõtlemine** — palusid AI-l samm-sammult läbi mõelda
+- [ ] **Näited** — andsid näiteid soovitud vastusest
+- [ ] **Piirangud** — seadsid pikkuse, keele vm piiranguid
+
+!!! success "Hästi tehtud!"
+    Sa just kasutasid prompt engineering tehnikaid **päris probleemide** lahendamiseks. Need samad tehnikad töötavad igas olukorras, kus AI-ga suhtled — olgu see koodikirjutamine, uurimistöö või õppimine.
 
 ---
 
@@ -211,9 +178,8 @@ Testi oma prompti. Kui tulemus pole rahuldav, muuda üht elementi korraga ja tes
 
 Selles praktikumis sa:
 
-- Kogesid vahet halva ja hea prompti vahel
-- Kasutasid zero-shot ja few-shot tehnikat ning nägid erinevust
-- Proovisid chain-of-thought tehnikat arvutusülesandel
-- Nägid, kuidas rolli andmine muudab vastuse stiili ja sügavust
-- Ehitasid üles struktureeritud prompti neljast osast
-- Kogesid, et prompting on iteratiivne protsess
+- Lahendasid kolm reaalset IT-tugiprobleemi AI abiga
+- Kogesid, kuidas täpsem küsimus annab parema vastuse
+- Kasutasid promptimistehnikaid loomulikult, probleeme lahendades
+- Dokumenteerisid lahenduskäigu nagu päris IT-tugitiimis
+- Õppisid AI vastuseid kriitiliselt hindama

@@ -26,7 +26,8 @@ See pole lihtsalt "küsimuse küsimine." See on struktureeritud suhtlus, kus sa 
     ??? tip "Vihje"
         Sama loogika kehtib AI puhul. Mida täpsem juhis, seda parem tulemus.
 
-    ✅ **Vastus:** Täpsem juhis annab parema tulemuse, sest kuulaja (või AI) ei pea arvama, mida sa tegelikult tahad. "Osta midagi" jätab liiga palju tõlgendamisruumi. AI puhul on täpselt sama — "kirjuta kood" vs "kirjuta Python funktsioon, mis võtab CSV-faili sisendiks ja tagastab sorteeritud listi" annab drastiliselt erineva tulemuse.
+    ??? success "Vastus"
+        Täpsem juhis annab parema tulemuse, sest kuulaja (või AI) ei pea arvama, mida sa tegelikult tahad. "Osta midagi" jätab liiga palju tõlgendamisruumi. AI puhul on täpselt sama — "kirjuta kood" vs "kirjuta Python funktsioon, mis võtab CSV-faili sisendiks ja tagastab sorteeritud listi" annab drastiliselt erineva tulemuse.
 
 ## Zero-shot prompting
 
@@ -230,31 +231,36 @@ Prompt engineering pole lihtsalt "küsimuse küsimine" — see on struktureeritu
     ??? tip "Vihje"
         Üks annab ülesande ilma näideteta, teine annab mõned näited ette. Kumba kasutaksid, kui tahad kindlat formaati?
 
-    ✅ **Vastus:** Zero-shot annab mudelile ülesande ilma näideteta — mudel peab ise aru saama, mida temalt oodatakse. Few-shot annab enne ülesannet mõned näited (tavaliselt 2–5), mis näitavad soovitud formaati ja loogikat. Few-shot on tõhusam ebatavaliste ülesannete puhul ja kui soovid kindlat väljundiformaati.
+    ??? success "Vastus"
+        Zero-shot annab mudelile ülesande ilma näideteta — mudel peab ise aru saama, mida temalt oodatakse. Few-shot annab enne ülesannet mõned näited (tavaliselt 2–5), mis näitavad soovitud formaati ja loogikat. Few-shot on tõhusam ebatavaliste ülesannete puhul ja kui soovid kindlat väljundiformaati.
 
 ??? question "2. Millal on chain-of-thought kasulik ja millal mitte?"
     ??? tip "Vihje"
         Mõtle: kas ülesanne nõuab *loogikat* või ainult fakti meenutamist?
 
-    ✅ **Vastus:** Chain-of-thought on kasulik, kui ülesanne nõuab loogikat, arvutamist või mitme teguri kaalumist — näiteks serveri mälu planeerimine, võrguaadressi arvutamine või keeruka otsuse tegemine. See ei ole kasulik lihtsate faktiküsimuste puhul ("Mis on DNS?"), kus samm-sammuline mõtlemine ei anna midagi juurde.
+    ??? success "Vastus"
+        Chain-of-thought on kasulik, kui ülesanne nõuab loogikat, arvutamist või mitme teguri kaalumist — näiteks serveri mälu planeerimine, võrguaadressi arvutamine või keeruka otsuse tegemine. See ei ole kasulik lihtsate faktiküsimuste puhul ("Mis on DNS?"), kus samm-sammuline mõtlemine ei anna midagi juurde.
 
 ??? question "3. Kuidas aitab struktureeritud prompt paremaid tulemusi saada?"
     ??? tip "Vihje"
         Mõtle tööülesandele: kas parem on "tee midagi" või "ülesanne + kontekst + nõuded + formaat"?
 
-    ✅ **Vastus:** Struktureeritud prompt eraldab selgelt ülesande, konteksti, nõuded ja väljundiformaadi. See aitab mudelil aru saada, mida temalt täpselt oodatakse, milline on taustsüsteem, millised piirangud kehtivad ja millises formaadis vastust soovitakse. Ilma struktuurita võib mudel teha valesid eeldusi konteksti kohta.
+    ??? success "Vastus"
+        Struktureeritud prompt eraldab selgelt ülesande, konteksti, nõuded ja väljundiformaadi. See aitab mudelil aru saada, mida temalt täpselt oodatakse, milline on taustsüsteem, millised piirangud kehtivad ja millises formaadis vastust soovitakse. Ilma struktuurita võib mudel teha valesid eeldusi konteksti kohta.
 
 ??? question "4. Mis vahe on süsteemipromptil ja kasutajapromptil?"
     ??? tip "Vihje"
         Üks on nagu "tööleping", teine nagu "tööülesanne". Kumb kehtib kogu vestluse jooksul?
 
-    ✅ **Vastus:** Süsteemiprompt määrab mudeli käitumise kogu vestluse jooksul — näiteks rolli, keele, stiili ja piirangud. See on nagu "tööleping." Kasutajaprompt on konkreetne küsimus või ülesanne, mille kasutaja esitab — see on nagu "tööülesanne." Süsteemiprompt kehtib kogu vestluse jooksul, kasutajaprompt muutub iga sõnumiga.
+    ??? success "Vastus"
+        Süsteemiprompt määrab mudeli käitumise kogu vestluse jooksul — näiteks rolli, keele, stiili ja piirangud. See on nagu "tööleping." Kasutajaprompt on konkreetne küsimus või ülesanne, mille kasutaja esitab — see on nagu "tööülesanne." Süsteemiprompt kehtib kogu vestluse jooksul, kasutajaprompt muutub iga sõnumiga.
 
 ??? question "5. Nimeta kolm viisi, kuidas prompti optimeerida."
     ??? tip "Vihje"
         Mõtle: mida sa saad lisada (formaat, piirangud) ja mida sa saad ära jätta (ebamäärasus)?
 
-    ✅ **Vastus:** (1) Ole konkreetne — "refaktoreeri see funktsioon kasutama list comprehension'i" on parem kui "kirjuta parem kood." (2) Määra väljundiformaat — ütle, kas tahad JSON-i, tabelit, koodi või proosa teksti. (3) Anna negatiivne juhis — ütle, mida mudel *ei tohiks* teha, näiteks "ära alusta vastust sõnaga 'Muidugi'" või "ära genereeri koodi, kui ma ei küsi."
+    ??? success "Vastus"
+        (1) Ole konkreetne — "refaktoreeri see funktsioon kasutama list comprehension'i" on parem kui "kirjuta parem kood." (2) Määra väljundiformaat — ütle, kas tahad JSON-i, tabelit, koodi või proosa teksti. (3) Anna negatiivne juhis — ütle, mida mudel *ei tohiks* teha, näiteks "ära alusta vastust sõnaga 'Muidugi'" või "ära genereeri koodi, kui ma ei küsi."
 
 [^few_shot]: Brown, T. et al. (2020). Language Models are Few-Shot Learners. *Advances in Neural Information Processing Systems*, 33. https://arxiv.org/abs/2005.14165
 [^cot]: Wei, J. et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. *Advances in Neural Information Processing Systems*, 35. https://arxiv.org/abs/2201.11903

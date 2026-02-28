@@ -57,5 +57,5 @@ flowchart LR
     end
 ```
 
-  <figcaption>Joonis 0.1. Kursuse läbimise soovituslik järjekord (Talvik, 2026).</figcaption>
+  <figcaption>Kursuse läbimise soovituslik järjekord (Talvik, 2025).</figcaption>
 </figure>

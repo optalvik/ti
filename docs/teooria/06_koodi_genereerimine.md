@@ -104,18 +104,23 @@ AI koodiabilised genereerivad koodi statistiliste mustrite põhjal — nad ei m�
 ## Enesekontroll
 
 ??? question "1. Miks ei tohi AI-genereeritud koodi pimesi usaldada?"
-    AI genereerib koodi statistiliste mustrite põhjal — ta ei "mõista" koodi loogikat, turvalisust ega jõudlust. AI-genereeritud kood võib sisaldada süntaksivigu, turvaauke (SQL-süst, hardcoded credentials), jõudlusprobleeme või lihtsalt valesti töötada. Uuringud näitavad, et AI-abilistega töötavad arendajad toodavad rohkem turvaauguga koodi, sest nad usaldavad väljundit ilma kontrollimata.
+    ??? success "Vastus"
+        AI genereerib koodi statistiliste mustrite põhjal — ta ei "mõista" koodi loogikat, turvalisust ega jõudlust. AI-genereeritud kood võib sisaldada süntaksivigu, turvaauke (SQL-süst, hardcoded credentials), jõudlusprobleeme või lihtsalt valesti töötada. Uuringud näitavad, et AI-abilistega töötavad arendajad toodavad rohkem turvaauguga koodi, sest nad usaldavad väljundit ilma kontrollimata.
 
 ??? question "2. Millal on Copilot parem valik kui Claude Code?"
-    Copilot on parem igapäevaseks koodikirjutamiseks IDE-s — ta pakub reaalajas soovitusi, lõpetab mustrite järgi ja genereerib boilerplate'i kiiresti. Claude Code on parem keerukate, mitmeastmeliste ülesannete jaoks, kus on vaja navigeerida suures koodibaasis, muuta mitut faili korraga ja teha iseseisvaid otsuseid.
+    ??? success "Vastus"
+        Copilot on parem igapäevaseks koodikirjutamiseks IDE-s — ta pakub reaalajas soovitusi, lõpetab mustrite järgi ja genereerib boilerplate'i kiiresti. Claude Code on parem keerukate, mitmeastmeliste ülesannete jaoks, kus on vaja navigeerida suures koodibaasis, muuta mitut faili korraga ja teha iseseisvaid otsuseid.
 
 ??? question "3. Kuidas saab AI aidata arendusprotsessi testimise etapis?"
-    AI genereerib unit teste, katab nii normaal- kui äärejuhtumid (tühi sisend, null, väga suur arv, vale formaat), leiab puuduvaid testistsenaariume ja genereerib mock-objekte. AI on testide genereerimisel eriti hea, sest ta mõtleb äärejuhtumitele, millele arendaja ise ei pruugi mõelda.
+    ??? success "Vastus"
+        AI genereerib unit teste, katab nii normaal- kui äärejuhtumid (tühi sisend, null, väga suur arv, vale formaat), leiab puuduvaid testistsenaariume ja genereerib mock-objekte. AI on testide genereerimisel eriti hea, sest ta mõtleb äärejuhtumitele, millele arendaja ise ei pruugi mõelda.
 
 ??? question "4. Millised turvariskid on AI-genereeritud koodis?"
-    Levinumad turvariskid: SQL-süst (parameetriteta päringud), krüpteerimata paroolid, hardcoded credentials, ebaturvalised vaikeseadistused, puuduv sisendvalideerimine, aegunud teekide kasutamine teadaolevate haavatavustega. AI ei mõtle turvalisusele süsteemselt — ta genereerib koodi, mis *töötab*, aga ei pruugi olla *turvaline*.
+    ??? success "Vastus"
+        Levinumad turvariskid: SQL-süst (parameetriteta päringud), krüpteerimata paroolid, hardcoded credentials, ebaturvalised vaikeseadistused, puuduv sisendvalideerimine, aegunud teekide kasutamine teadaolevate haavatavustega. AI ei mõtle turvalisusele süsteemselt — ta genereerib koodi, mis *töötab*, aga ei pruugi olla *turvaline*.
 
 ??? question "5. Nimeta viis etappi arendusprotsessis, kus AI saab aidata."
-    (1) Planeerimine — arhitektuuri arutelu ja alternatiivide kaalumine. (2) Kirjutamine — boilerplate, funktsioonid, konfiguratsioonid. (3) Testimine — unit testid, äärejuhtumid. (4) Dokumenteerimine — docstring'id, README, SOP-d. (5) Refaktoreerimine — koodi puhastamine, tüübiannotatsioonid, funktsioonide jagamine.
+    ??? success "Vastus"
+        (1) Planeerimine — arhitektuuri arutelu ja alternatiivide kaalumine. (2) Kirjutamine — boilerplate, funktsioonid, konfiguratsioonid. (3) Testimine — unit testid, äärejuhtumid. (4) Dokumenteerimine — docstring'id, README, SOP-d. (5) Refaktoreerimine — koodi puhastamine, tüübiannotatsioonid, funktsioonide jagamine.
 
 [^security_study]: Perry, N. et al. (2023). Do Users Write More Insecure Code with AI Assistants? *ACM Conference on Computer and Communications Security*. https://arxiv.org/abs/2211.03622

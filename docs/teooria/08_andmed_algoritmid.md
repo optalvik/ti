@@ -168,18 +168,23 @@ Andmestruktuurid ja algoritmid on AI süsteemide taustal töötav mehhanism. Mas
 ## Enesekontroll
 
 ??? question "1. Miks kasutab Transformer-arhitektuur maatrikskorrutamist?"
-    Tähelepanumehhanism (*self-attention*) arvutab iga sõna seose iga teise sõnaga tekstis. See arvutus esitletakse maatrikskorrutamisena: küsimuste, võtmete ja väärtuste maatriksid korrutatakse omavahel. Maatrikskorrutamine on paralleliseeritav — GPU-d suudavad tuhandeid korrutamisi teha samal ajal, mis teeb Transformeri kiireks.
+    ??? success "Vastus"
+        Tähelepanumehhanism (*self-attention*) arvutab iga sõna seose iga teise sõnaga tekstis. See arvutus esitletakse maatrikskorrutamisena: küsimuste, võtmete ja väärtuste maatriksid korrutatakse omavahel. Maatrikskorrutamine on paralleliseeritav — GPU-d suudavad tuhandeid korrutamisi teha samal ajal, mis teeb Transformeri kiireks.
 
 ??? question "2. Mis vahe on BFS ja DFS otsingustrateegial?"
-    BFS (laiuti otsing) uurib kõigepealt kõiki naabersõlmi, siis naabrite naabreid — see leiab alati lühima tee, aga kasutab rohkem mälu. DFS (sügavuti otsing) läheb ühe haru lõpuni, siis taganeb ja proovib teist — see kasutab vähem mälu, aga ei garanteeri lühimat teed.
+    ??? success "Vastus"
+        BFS (laiuti otsing) uurib kõigepealt kõiki naabersõlmi, siis naabrite naabreid — see leiab alati lühima tee, aga kasutab rohkem mälu. DFS (sügavuti otsing) läheb ühe haru lõpuni, siis taganeb ja proovib teist — see kasutab vähem mälu, aga ei garanteeri lühimat teed.
 
 ??? question "3. Kuidas formuleerida otsinguülesannet?"
-    Defineerida kolm asja: (1) algseisund — kust alustame, (2) eesmärk — mida otsime, (3) lubatud sammud — kuidas saame liikuda. Näide: algseisund = serveri A IP-aadress, eesmärk = jõuda serverini F, lubatud sammud = liikumine ühendatud serverite vahel. Siis saab valida algoritmi (BFS lühimaks teeks, DFS kõigi teede leidmiseks).
+    ??? success "Vastus"
+        Defineerida kolm asja: (1) algseisund — kust alustame, (2) eesmärk — mida otsime, (3) lubatud sammud — kuidas saame liikuda. Näide: algseisund = serveri A IP-aadress, eesmärk = jõuda serverini F, lubatud sammud = liikumine ühendatud serverite vahel. Siis saab valida algoritmi (BFS lühimaks teeks, DFS kõigi teede leidmiseks).
 
 ??? question "4. Miks on paisktabel tokeniseerimisel oluline?"
-    Tokeniseerimisel tuleb iga sõna või sõnaosa kiiresti teisendada numbriliseks ID-ks. Paisktabel teeb seda konstantse ajaga — O(1) — olenemata sellest, kui suur sõnavara on. Ilma paisktabelita peaks iga tokeni jaoks kogu sõnavara läbi vaatama, mis oleks palju aeglasem.
+    ??? success "Vastus"
+        Tokeniseerimisel tuleb iga sõna või sõnaosa kiiresti teisendada numbriliseks ID-ks. Paisktabel teeb seda konstantse ajaga — O(1) — olenemata sellest, kui suur sõnavara on. Ilma paisktabelita peaks iga tokeni jaoks kogu sõnavara läbi vaatama, mis oleks palju aeglasem.
 
 ??? question "5. Nimeta kolm AI süsteemi, mis kasutavad puustruktuuri."
-    (1) Otsustuspuud masinõppes — mudel teeb otsuseid küsimuste jada kaudu. (2) Mängupuud (nt AlphaGo) — agent uurib võimalikke käike puustruktuuris. (3) Parsimispuud loomuliku keele töötluses — laused jaotatakse grammatilisteks komponentideks puustruktuurina.
+    ??? success "Vastus"
+        (1) Otsustuspuud masinõppes — mudel teeb otsuseid küsimuste jada kaudu. (2) Mängupuud (nt AlphaGo) — agent uurib võimalikke käike puustruktuuris. (3) Parsimispuud loomuliku keele töötluses — laused jaotatakse grammatilisteks komponentideks puustruktuurina.
 
 [^clrs]: Cormen, T. H. et al. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. https://mitpress.mit.edu/books/introduction-algorithms

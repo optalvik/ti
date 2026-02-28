@@ -3,160 +3,169 @@ tags:
   - Praktikum
 ---
 
-# Praktikum 3: AI-põhine infootsing Perplexity abil
+# Praktikum 3: Tehno-detektiiv
 
-Selles praktikumis õpid kasutama AI-otsingumootorit, mis erineb tavalistest vestlusrobotitest ühe olulise asja poolest — Perplexity näitab alati allikaid. Sa võrdled AI-otsingut tavalise Google'i otsinguga ja õpid hindama, millal kumbagi kasutada.
+Selles praktikumis oled sa detektiiv. Sinu ülesanne on uurida välja, kas üks levinud tehnoväide vastab tõele. Kasutad AI-otsingut, tavalist otsingut ja allikate hindamist, et jõuda **tõendatud järelduseni**.
 
-!!! info "Vajalik konto"
+!!! abstract "Eesmärgid"
+    Selle praktikumi lõpuks:
+
+    - Oskad kasutada AI-otsingut (Perplexity) sihipäraselt
+    - Tead, kuidas hinnata allikate usaldusväärsust
+    - Oled kirjutanud tõenduspõhise faktikontrolli raporti
+
+!!! info "Vajalikud tööriistad"
     - **Perplexity:** tasuta konto aadressil [perplexity.ai](https://www.perplexity.ai)
+    - **Google:** tavapärane veebiotsing
 
 ---
 
-## Osa 1: Esimene AI-otsing
+## Osa 1: Vali oma juhtum
 
-### Samm 1: Logi sisse
+Vali üks järgmistest väidetest, mida hakkad uurima (või paku ise):
 
-Ava brauser ja mine aadressile [perplexity.ai](https://www.perplexity.ai). Loo tasuta konto (saad kasutada Google'i kontot).
-
-### Samm 2: Esimene päring
-
-Kirjuta otsinguväljale:
-
-```text
-Mis on pilveteenus ja mille poolest erinevad IaaS, PaaS ja SaaS? Selgita eesti keeles lihtsate näidetega.
-```
-
-Loe vastust ja pane tähele:
-
-- Vastuse all on **allikate loetelu** — numbrid tekstis viitavad konkreetsetele veebilehtedele
-- Sa saad igale allikale klikkida ja kontrollida, kas AI tõlgendas seda õigesti
-- Vastus on koondatud mitmest allikast, mitte üks pikk arvamus
-
-### Samm 3: Võrdle Google'iga
-
-Ava uus tab ja otsi Google'ist täpselt sama:
-
-```text
-Mis on pilveteenus ja mille poolest erinevad IaaS PaaS SaaS
-```
-
-Täida tabel:
-
-| Aspekt | Google | Perplexity |
+| # | Väide | Valdkond |
 |---|---|---|
-| Mitu tulemust pidid avama? | | |
-| Kui kiiresti said vastuse? | | |
-| Kas allikad on nähtavad? | | |
-| Kas vastus on kokkuvõtlik? | | |
+| A | "Incognito mode teeb sind internetis nähtamatuks" | Privaatsus |
+| B | "Tasuta VPN kaitseb su andmeid sama hästi kui tasuline" | Turvalisus |
+| C | "Telefoni aku kestab kauem, kui sulged taustarakendused" | Riistvara |
+| D | "Avalikus WiFi-s ei tohi kunagi pangalehte avada" | Võrguturve |
+| E | "AI asendab programmeerijad 5 aasta pärast" | Tulevikutrendid |
+
+!!! tip "Hea valik"
+    Vali teema, mis sind päriselt huvitab — nii on uurimine põnevam. Kui tead mõnda muud tehnoväidet, mida tahad kontrollida, kasuta seda.
+
+Kirjuta üles: **Minu uuritav väide:**  _______________
 
 ---
 
-## Osa 2: Tehniline infootsing
+## Osa 2: Esmane uuring AI-ga
 
-### Ülesanne 1: Konkreetne tehniline küsimus
+### Samm 1: Küsi Perplexity-lt
 
-Esita Perplexity-le:
+Ava [perplexity.ai](https://www.perplexity.ai) ja sõnasta oma väide küsimusena. Näiteks:
 
-```text
-Kuidas seadistada Windows arvutis automaatsed varundused 
-välisele kõvakettale? Anna samm-sammult juhised.
-```
+- Väide A: *"Kas incognito mode teeb kasutaja internetis anonüümseks? Mis on tegelikud piirangud?"*
+- Väide D: *"Kas avalikus WiFi-s on pangalehe avamine ohtlik? Millised on reaalsed riskid 2025. aastal?"*
 
-Kontrolli tulemust:
+### Samm 2: Uuri allikaid
 
-- Kas juhised vastavad praegusele Windows versioonile?
-- Kas allikad viitavad ametlikele lehtedele?
-- Kas midagi on aegunud või vale?
+Perplexity näitab vastuse juures **allikaid**. Ava vähemalt 3 allikat ja hinda neid:
 
-### Ülesanne 2: Tõrkeotsing
-
-```text
-Tööarvuti on viimasel ajal väga aeglane. Millised on 
-samm-sammult diagnoosimise võtted ja levinumad põhjused?
-```
-
-Hinda: kas Perplexity pakub struktureeritud veaotsingu plaani? Kas allikad on usaldusväärsed (ametlik dokumentatsioon, tehnikafoorumid)?
-
----
-
-## Osa 3: Allikate hindamine
-
-### Ülesanne 3: Usaldusväärsusskoor
-
-Esita Perplexity-le mõni teema, kus info võib olla vastuoluline:
-
-```text
-Kas avalik WiFi on ohtlik? Millised on reaalsed ründeviisid ja kuidas end kaitsta?
-```
-
-Vaata vastust ja hinda iga allikat:
-
-| Allikas | Tüüp | Usaldusväärsus (1-5) | Miks? |
+| Allikas | Tüüp | Usaldusväärsus (1-5) | Põhjendus |
 |---|---|---|---|
-| | Akadeemiline / uudis / foorum / blogi | | |
+| | Ametlik / akadeemiline / uudis / blogi | | |
 | | | | |
 | | | | |
 
 !!! warning "Allikate hierarhia"
-    Kõik allikad pole võrdsed. Usaldusväärsuse järjekord:
+    Kõik allikad pole võrdsed:
 
-    1. Ametlik dokumentatsioon (Cisco, Microsoft, RFC)
-    2. Akadeemilised artiklid ja raamatud
-    3. Tuntud tehnikaväljaanded (Ars Technica, The Register)
-    4. Tehnikafoorumid (Stack Overflow, ServerFault)
-    5. Isiklikud blogid ja YouTube
+    1. **Ametlik dokumentatsioon** (Google, Microsoft, Cisco, CERT) — kõige usaldusväärsem
+    2. **Akadeemilised artiklid** — eelretsenseeritud teadusuuringud
+    3. **Tuntud tehnikaväljaanded** (Ars Technica, Wired, The Register)
+    4. **Tehnikafoorumid** (Stack Overflow, ServerFault) — kontrollida mitut vastust
+    5. **Blogid ja YouTube** — kõige vähem usaldusväärne, vajab alati lisakontrolli
 
-### Ülesanne 4: Faktikontroll
+### Samm 3: Lisa küsimusi
 
-Vali Perplexity vastusest **kolm konkreetset fakti** ja kontrolli neid otse allikast. Kirjuta üles:
+Esimene vastus tekitab uusi küsimusi. Sõnasta vähemalt 2 täpsustavat küsimust ja esita need Perplexityle. Näiteks:
 
-| Fakt | Allikas | Kas kattub? | Märkused |
-|---|---|---|---|
-| | | Jah / Ei / Osaliselt | |
-| | | | |
-| | | | |
+- "Mida näeb mu internetiteenuse pakkuja, kui kasutan incognito mode'i?"
+- "Kas HTTPS kaitseb avalikus WiFi-s piisavalt?"
+
+Kirjuta vastused ja allikad üles.
 
 ---
 
-## Osa 4: Fookuse häälestamine
+## Osa 3: Vastaspoole uuring
 
-### Ülesanne 5: Focus režiimid
+Hea detektiiv uurib **mõlemat poolt**. Nüüd otsi teadlikult infot, mis **ei nõustu** sinu senise leiuga.
 
-Perplexity-l on erinevad fookusrežiimid (All, Academic, Writing, Math jne). Proovi sama küsimust eri režiimides:
+### Samm 1: Google'i otsing
 
-Küsimus:
+Otsi Google'ist oma väite kohta, lisades sõnu nagu "myth", "debunked", "actually" või "misconception":
 
 ```text
-Mis on kaheastmeline autentimine (2FA) ja kuidas see töötab?
+"incognito mode" myth debunked
 ```
 
-Proovi režiimides **All** ja **Academic**. Võrdle:
+```text
+"public WiFi" banking "is it safe" 2025
+```
 
-| Aspekt | All | Academic |
-|---|---|---|
-| Allikate tüüp | | |
-| Vastuse detailsus | | |
-| Kumb sobib paremini IT-tööks? | | |
+### Samm 2: Kas leidub vastupidist infot?
 
-### Ülesanne 6: Jätku-küsimused
+| Küsimus | Sinu vastus |
+|---|---|
+| Kas keegi väidab vastupidist? | |
+| Kas nende allikad on usaldusväärsed? | |
+| Kas tõde on kusagil "vahepeal"? | |
 
-Perplexity pakub vastuse all seotud küsimusi. Vali üks ja kliki sellel. Pane tähele, kuidas AI ehitab eelmisele vastusele peale — täpselt nagu vestlus, aga allikatega.
+!!! tip "Nüanss on oluline"
+    Enamik tehnoväiteid pole 100% õiged ega 100% valed. Sageli on vastus: "See oleneb..." — ja just see nüanss on väärtuslik.
 
 ---
 
-## Osa 5: Praktiline ülesanne
+## Osa 4: Koosta raport
 
-### Ülesanne 7: IT-probleem algusest lõpuni
+Nüüd koosta oma uurimistöö tulemus. See on sinu praktikumi **lõpptulemus**.
 
-Kujuta ette: kolleeg helistab ja ütleb, et ta sai kahtlase e-kirja, mis palub parooli uuendada. Ta ei ole kindel, kas see on õige või petuskeem. Kasuta Perplexityt olukorra analüüsimiseks.
+Kopeeri järgmine mall oma dokumendifaili ja täida:
 
-1. Sõnasta probleem ja esita Perplexity-le
-2. Loe vastust ja kontrolli allikaid
-3. Sõnasta täpsustavad küsimused (nt "kuidas tuvastada phishing e-kirja?")
-4. Koosta oma dokumendifaili **veaotsingu plaan** koos allikatega
+```text
+═══════════════════════════════════════════════════
+FAKTIKONTROLLI RAPORT
+═══════════════════════════════════════════════════
 
-!!! tip "Hea tava"
-    IT-spetsialist ei ütle kliendile "AI ütles nii". Sa kasutad AI-d info leidmiseks, aga **kontrollid** enne, kui tegutsed. Perplexity allikad teevad selle lihtsamaks kui tavaline vestlusrobot.
+VÄIDE: [uuritav väide]
+
+VERDIKT: [Tõene / Osaliselt tõene / Eksitav / Vale]
+
+───────────────────────────────────────────────────
+KOKKUVÕTE (3-5 lauset):
+[Mida sa leidsid? Mis on tegelik olukord?]
+
+───────────────────────────────────────────────────
+TÕENDID POOLT:
+1. [fakt + allikas]
+2. [fakt + allikas]
+
+TÕENDID VASTU:
+1. [fakt + allikas]
+2. [fakt + allikas]
+
+───────────────────────────────────────────────────
+NÜANSS:
+[Millistel tingimustel on väide õige? Millistel vale?]
+
+───────────────────────────────────────────────────
+ALLIKAD:
+1. [autor/organisatsioon, pealkiri, URL]
+2.
+3.
+4.
+
+───────────────────────────────────────────────────
+PRAKTILINE SOOVITUS:
+[Mida peaks tavaline kasutaja tegelikult tegema?]
+═══════════════════════════════════════════════════
+```
+
+---
+
+## Osa 5: Enesekontroll
+
+Enne esitamist kontrolli oma raportit:
+
+- [ ] Verdikt põhineb allikatel, mitte arvamusel
+- [ ] Vähemalt 3 allikat on kasutatud
+- [ ] Vähemalt 1 allikas on ametlik dokumentatsioon või akadeemiline
+- [ ] Uurisin ka vastupidist seisukohta
+- [ ] Praktiline soovitus on konkreetne ja teostatav
+
+!!! warning "3K kontroll"
+    Sa **kasutasid** AI-d info leidmiseks (K1). Nüüd **kahtlusta** (K2) — kas Perplexity tõlgendas allikaid õigesti? **Kontrolli** (K3) — ava vähemalt üks allikas otse ja veendu, et Perplexity refereeris seda täpselt.
 
 ---
 
@@ -164,9 +173,11 @@ Kujuta ette: kolleeg helistab ja ütleb, et ta sai kahtlase e-kirja, mis palub p
 
 Selles praktikumis sa:
 
-- Tegid esimesed päringud Perplexity AI-otsingumootoris
-- Võrdlesid AI-otsingut tavalise Google'i otsinguga
+- Uurisid välja, kas levinud tehnoväide vastab tõele
+- Kasutasid AI-otsingut ja tavalist otsingut koos
 - Hindasid allikate usaldusväärsust ja tüüpe
-- Tegid faktikontrolli — kontrollisid, kas AI väited kattuvad allikatega
-- Kasutasid eri fookusrežiime tehnilise info otsimiseks
-- Lahendasid IT-tõrkeotsingu ülesande AI abil
+- Otsisid teadlikult ka vastupidist seisukohta
+- Koostasid tõenduspõhise faktikontrolli raporti
+
+!!! success "Boonusülesanne"
+    Esitle oma raportit klassile 2-minutilise "verdiktina". Kas klassikaaslased nõustuvad? Kas keegi leidis vastupidist infot?

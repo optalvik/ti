@@ -115,19 +115,25 @@ AI tööriistad jagunevad nelja põhikategooriasse: üldised vestlusrobotid (Cha
 ## Enesekontroll
 
 ??? question "1. Mille poolest erineb lokaalne mudel (Ollama) pilveteenusest (ChatGPT, Claude)?"
-    Lokaalne mudel töötab sinu enda arvutis — andmed ei lahku masinast, mis tagab privaatsuse. Pilveteenused töötavad teenusepakkuja serverites, mis tähendab, et sinu sisend liigub üle interneti. Lokaalsed mudelid on väiksemad ja vähem võimekad, aga privaatsuse seisukohalt on need ainus valik, kui andmed ei tohi ettevõttest lahkuda.
+    ??? success "Vastus"
+        Lokaalne mudel töötab sinu enda arvutis — andmed ei lahku masinast, mis tagab privaatsuse. Pilveteenused töötavad teenusepakkuja serverites, mis tähendab, et sinu sisend liigub üle interneti. Lokaalsed mudelid on väiksemad ja vähem võimekad, aga privaatsuse seisukohalt on need ainus valik, kui andmed ei tohi ettevõttest lahkuda.
 
 ??? question "2. Millisel juhul eelistaksid Copilot'i ja millisel Claude Code'i?"
-    Copilot on parem igapäevaseks koodikirjutamiseks IDE-s — ta pakub reaalajas soovitusi, kui sa kirjutad. Claude Code on parem keerukamate, mitmeastmeliste ülesannete jaoks — näiteks kogu koodibaasi refaktoreerimine, mitme faili samaaegne muutmine või agentlik töövoog, kus tööriist teeb mitu sammu iseseisvalt.
+    ??? success "Vastus"
+        Copilot on parem igapäevaseks koodikirjutamiseks IDE-s — ta pakub reaalajas soovitusi, kui sa kirjutad. Claude Code on parem keerukamate, mitmeastmeliste ülesannete jaoks — näiteks kogu koodibaasi refaktoreerimine, mitme faili samaaegne muutmine või agentlik töövoog, kus tööriist teeb mitu sammu iseseisvalt.
 
 ??? question "3. Mille poolest erineb NotebookLM tavalisest vestlusrobotist ja miks see õppijale kasulik on?"
-    NotebookLM piirdub ainult kasutaja üles laaditud allikatega — ta ei kasuta oma treenimisandmeid ega hallutsineri juurde. Iga vastus viitab konkreetsele kohale konkreetses dokumendis. Tavaline vestlusrobot (ChatGPT, Claude, Gemini) vastab oma treenimisandmete põhjal ja võib hallutsineerida. NotebookLM on eriti kasulik õppimisel, sest ta toimib nagu isiklik tuutor, kes on lugenud täpselt samu materjale. Lisaks genereerib ta audiokokkuvõtteid, mida saab kuulata teel kooli või trenni ajal.
+    ??? success "Vastus"
+        NotebookLM piirdub ainult kasutaja üles laaditud allikatega — ta ei kasuta oma treenimisandmeid ega hallutsineri juurde. Iga vastus viitab konkreetsele kohale konkreetses dokumendis. Tavaline vestlusrobot (ChatGPT, Claude, Gemini) vastab oma treenimisandmete põhjal ja võib hallutsineerida. NotebookLM on eriti kasulik õppimisel, sest ta toimib nagu isiklik tuutor, kes on lugenud täpselt samu materjale. Lisaks genereerib ta audiokokkuvõtteid, mida saab kuulata teel kooli või trenni ajal.
 
 ??? question "4. Miks on oluline proovida mitut AI tööriista, mitte keskenduda ainult ühele?"
-    Eri mudelitel on erinevad tugevused — üks on parem pikas analüüsis, teine kiiremas koodigenereerimises, kolmas konkreetses valdkonnas. Samuti muutuvad tööriistad kiiresti — tänane parim valik ei pruugi olla homme parim. Kõige olulisem on universaalne promptimisoskus, mis töötab igas tööriistas.
+    ??? success "Vastus"
+        Eri mudelitel on erinevad tugevused — üks on parem pikas analüüsis, teine kiiremas koodigenereerimises, kolmas konkreetses valdkonnas. Samuti muutuvad tööriistad kiiresti — tänane parim valik ei pruugi olla homme parim. Kõige olulisem on universaalne promptimisoskus, mis töötab igas tööriistas.
 
 ??? question "5. Nimeta kolm konkreetset viisi, kuidas IT-spetsialist AI tööriista igapäevatöös kasutab."
-    Näiteks: (1) logide analüüs — kopeeri serverilogid LLM-i ja küsi anomaaliate kohta; (2) skriptide kirjutamine — kirjelda ülesannet ja saa toimiv algversioon; (3) veaotsing — kleebi veateade ja küsi selgitust ja lahendusetappe. Lisaks: dokumentatsiooni koostamine, konfiguratsiooni genereerimine.
+    ??? success "Vastus"
+        Näiteks: (1) logide analüüs — kopeeri serverilogid LLM-i ja küsi anomaaliate kohta; (2) skriptide kirjutamine — kirjelda ülesannet ja saa toimiv algversioon; (3) veaotsing — kleebi veateade ja küsi selgitust ja lahendusetappe. Lisaks: dokumentatsiooni koostamine, konfiguratsiooni genereerimine.
 
 ??? question "6. Millal on lokaalne mudel (Ollama) parem valik kui pilveteenus?"
-    Kui töötad tundlike andmetega, mida ei tohi ettevõttest välja saata — näiteks klientide isikuandmed, sisemised konfiguratsioonid, ärisaladused, meditsiiniandmed. Samuti kui sul pole usaldusväärset internetiühendust või kui tahad AI-d kasutada ilma igakuise tellimuseta (Ollama on tasuta).
+    ??? success "Vastus"
+        Kui töötad tundlike andmetega, mida ei tohi ettevõttest välja saata — näiteks klientide isikuandmed, sisemised konfiguratsioonid, ärisaladused, meditsiiniandmed. Samuti kui sul pole usaldusväärset internetiühendust või kui tahad AI-d kasutada ilma igakuise tellimuseta (Ollama on tasuta).

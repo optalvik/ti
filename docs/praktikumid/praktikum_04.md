@@ -3,144 +3,200 @@ tags:
   - Praktikum
 ---
 
-# Praktikum 4: NotebookLM — allikate analüüs AI abil
+# Praktikum 4: Loo oma õppematerjal
 
-Selles praktikumis kasutad Google'i NotebookLM-i, mis erineb tavalistest AI-dest oluliselt — sa laadid üles oma allikad ja AI vastab ainult nende põhjal. See tähendab vähem hallutsinatsioone ja kontrollitavamaid vastuseid.
+Selles praktikumis kasutad Google'i NotebookLM-i, et luua **päris õppematerjal**, mida saad ise (ja su klassikaaslased) kasutada. Sa laadid üles allikad, genereerid kokkuvõtteid, lood küsimusi ja teed audiokokkuvõtte.
+
+!!! abstract "Eesmärgid"
+    Selle praktikumi lõpuks:
+
+    - Oskad NotebookLM-i kasutada allikapõhiseks tööks
+    - Oled loonud kompaktse õppematerjali ühe IT-teema kohta
+    - Tead, mille poolest erineb allikapõhine AI tavalisest vestlusrobotist
 
 !!! info "Vajalik konto"
     - **NotebookLM:** Google'i konto aadressil [notebooklm.google.com](https://notebooklm.google.com)
 
 ---
 
-## Osa 1: Esimene notebook
+## Osa 1: Vali teema ja kogu allikad
 
-### Samm 1: Loo uus notebook
+### Samm 1: Vali IT-teema
 
-Mine [notebooklm.google.com](https://notebooklm.google.com) ja logi Google'i kontoga sisse. Vajuta **New Notebook**.
+Vali üks teema, mille kohta tahad õppematerjali luua. Hea valik on teema, mida sul on vaja ka päriselt õppida.
 
-### Samm 2: Lisa allikad
+Näiteid:
 
-Laadi üles vähemalt 2 allikat. Võid kasutada:
+- Võrguprotokollid (TCP/IP, DNS, DHCP)
+- Küberturvalisus (tulemüürid, krüpteerimine, autentimine)
+- Pilveteenused (IaaS, PaaS, SaaS)
+- Operatsioonisüsteemid (Linux vs Windows haldus)
+- Virtualiseerimine ja konteinerid
 
-- Mõne teooriapeatüki PDF-i sellelt kursuselt
-- Cisco CCNA dokumentatsiooni lehekülgi
-- Wikipedia artiklit mõne võrgutehnoloogia kohta
+**Minu teema:** _______________
 
-!!! tip "Allikate valik"
-    NotebookLM töötab kõige paremini, kui allikad on **sama teema** kohta, aga **eri vaatenurgast**. Näiteks üks akadeemiline ja üks praktiline allikas.
+### Samm 2: Kogu allikad
 
-### Samm 3: Esimene küsimus
+Leia 2-4 allikat oma teema kohta. Kasuta erinevaid tüüpe:
 
-Kui allikad on üles laetud, kirjuta vestlusaknasse:
+| Allikatüüp | Kust leida | Näide |
+|---|---|---|
+| Kursuse materjal | Selle kursuse teooriapeatükid | PDF-ina salvestatud peatükk |
+| Ametlik dokumentatsioon | Cisco, Microsoft, Linux.org | Ametlik juhend |
+| Wikipedia / õpik | Wikipedia, IT-raamatud | Hea üldine ülevaade |
+| Tehniline artikkel | Medium, Dev.to, Ars Technica | Praktiline selgitus |
 
-```text
-Mis on selle materjali põhiteemad? Anna lühikokkuvõte.
-```
+!!! tip "Allikate kvaliteet loeb"
+    NotebookLM vastab **ainult** sinu allikate põhjal. Kui laadid üles kehvad allikad, saad kehva tulemuse. Vali sisukaid ja usaldusväärseid allikaid.
 
-Pane tähele: vastuse juures on **viited konkreetsetele kohtadele** sinu allikates. Sa saad klikkida ja näha täpselt, kust info pärineb.
+### Samm 3: Loo notebook
+
+Mine [notebooklm.google.com](https://notebooklm.google.com) ja loo uus notebook. Laadi üles oma allikad (PDF, veebileht, tekst).
 
 ---
 
-## Osa 2: Allikatepõhine analüüs
+## Osa 2: Genereeri õppematerjal
 
-### Ülesanne 1: Võrdlev analüüs
+### Ülesanne 1: Teema kokkuvõte
 
-Kui sul on kaks allikat, küsi:
-
-```text
-Millised on peamised erinevused nende kahe allika käsitluses? 
-Kus nad on nõus ja kus lahknevad?
-```
-
-### Ülesanne 2: Mõistete selgitus
+Küsi NotebookLM-ilt:
 
 ```text
-Selgita selle materjali põhjal, mis on [vali teema, nt VLAN]. 
-Kasuta ainult neid allikaid — ära lisa omalt poolt.
+Koosta selle materjali põhjal kompaktne kokkuvõte, mis katab
+kõik põhimõisted. Struktureeri loogiliselt: alusta põhitõdedest
+ja liigu detailsemate teemade juurde. Maksimaalselt 1 lehekülg.
 ```
 
-Kontrolli: kas NotebookLM jääb tõepoolest allikate raamidesse? Kas ta lisab midagi, mida allikates pole?
+Kontrolli tulemust:
 
-### Ülesanne 3: Küsimuste genereerimine
+- Kas kokkuvõte katab olulised teemad?
+- Kas kõik väited on allikatega toetatud? (kliki viidetel)
+- Kas midagi olulist jäi välja?
+
+**Paranda** kokkuvõtet — küsi täiendavaid küsimusi, kui midagi on puudu.
+
+### Ülesanne 2: Põhimõistete sõnastik
 
 ```text
-Genereeri selle materjali põhjal 5 eksamiküsimust koos 
-õigete vastustega.
+Loo selle materjali põhimõistete sõnastik. Iga mõiste juurde:
+- Lühike definitsioon (1-2 lauset)
+- Näide või analoogia igapäevaelust
+Sorteeri tähestikulises järjekorras.
 ```
 
-Hinda genereeritud küsimusi:
+Hinda: kas definitsioonid on arusaadavad ka kellelegi, kes teemat ei tunne?
 
-| Küsimus | Kas põhineb allikal? | Kas vastus on korrektne? | Raskusaste (1-5) |
+### Ülesanne 3: Harjutusküsimused
+
+```text
+Genereeri selle materjali põhjal 10 küsimust koos õigete vastustega.
+Kasuta erinevaid tüüpe:
+- 3 valikvastustega küsimust (4 valikut)
+- 3 õige/vale väidet
+- 2 lühivastusega küsimust
+- 2 selgitamist nõudvat küsimust
+```
+
+Kontrolli iga küsimust:
+
+| # | Kas põhineb allikal? | Kas vastus on õige? | Raskusaste (1-5) |
 |---|---|---|---|
-| | Jah / Ei | Jah / Ei | |
-| | | | |
+| 1 | | | |
+| 2 | | | |
+| ... | | | |
+
+Paranda vead ja küsi vajadusel uusi küsimusi.
 
 ---
 
 ## Osa 3: Audio kokkuvõte
 
-### Ülesanne 4: Podcast-stiilis kokkuvõte
+### Ülesanne 4: Kuulatav versioon
 
-NotebookLM oskab genereerida audio kokkuvõtte sinu allikatest. Vajuta **Audio Overview** nuppu.
+NotebookLM oskab genereerida audiokokkuvõtte sinu allikatest. Vajuta **Audio Overview** nuppu.
 
-Kuula genereeritud audiot ja vasta:
+Kuula genereeritud audiot ja hinda:
 
-- Kas kokkuvõte on täpne?
-- Kas midagi jäi välja, mis oleks pidanud sees olema?
-- Kas midagi on valesti tõlgendatud?
+| Aspekt | Hinnang (1-5) |
+|---|---|
+| Kas põhiteemad on kaetud? | |
+| Kas selgitused on arusaadavad? | |
+| Kas midagi on valesti tõlgendatud? | |
+| Kas kuulaksid seda kordamiseks? | |
 
-!!! info "Miks see kasulik on?"
-    Audio kokkuvõte on hea viis materjali kordamiseks — saad kuulata bussiga sõites või trennis. Aga **alati kontrolli** sisu täpsust, sest AI võib nüansse kaotada.
-
----
-
-## Osa 4: Praktiline projekt
-
-### Ülesanne 5: Oma õppematerjal
-
-Loo uus notebook ja laadi üles 3-5 allikat ühe IT-teema kohta, mis sind huvitab (näiteks tulemüürid, DNS, konteinerid, pilveteenused).
-
-Koosta NotebookLM abil:
-
-1. **Teema kokkuvõte** — 1 lehekülg, mis katab põhimõisted
-2. **5 kordamisküsimust** koos vastustega
-3. **Mõistekaart** — palu NotebookLM-il loetleda peamised mõisted ja nende seosed
-
-### Ülesanne 6: Kvaliteedi kontroll
-
-Vaata oma loodud materjali kriitilise pilguga:
-
-| Kriteerium | Hinnang (1-5) | Märkused |
-|---|---|---|
-| Kas info on faktiliselt õige? | | |
-| Kas kõik väited on allikatega toetatud? | | |
-| Kas küsimused on asjakohased? | | |
-| Kas materjal oleks kasulik teisele õppijale? | | |
+!!! tip "Praktiline kasutus"
+    Audio kokkuvõte on hea viis materjali kordamiseks — kuula bussiga sõites, trennis või enne eksamit. Aga **kontrolli** alati, kas audio vastab allikatele.
 
 ---
 
-## Osa 5: Võrdlus ChatGPT-ga
+## Osa 4: Testi klassikaaslase peal
 
-### Ülesanne 7: Sama küsimus, erinev lähenemine
+### Ülesanne 5: Vastastikune testimine
 
-Esita sama küsimus NotebookLM-ile (oma allikate põhjal) ja ChatGPT-le (ilma allikateta):
+Vaheta klassikaaslasega: anna talle oma harjutusküsimused (ilma vastusteta) ja proovi tema omasid.
+
+Pärast testimist hinda:
+
+| Küsimus | Sinu vastus |
+|---|---|
+| Mitu küsimust klassikaaslane õigesti vastas? | /10 |
+| Millised küsimused olid liiga kerged? | |
+| Millised olid liiga rasked? | |
+| Kas mõni küsimus oli segaselt sõnastatud? | |
+
+Paranda oma küsimusi vastavalt tagasisidele.
+
+!!! info "Miks see oluline on?"
+    Küsimuste testimine teiste peal näitab, kas sinu materjal on **tegelikult** arusaadav — mitte ainult sulle, vaid ka kellelegi, kes teemat alles õpib.
+
+---
+
+## Osa 5: Paki kokku
+
+### Ülesanne 6: Lõplik õppepakett
+
+Kogu kõik kokku ühte dokumenti. See on sinu praktikumi **lõpptulemus**:
 
 ```text
-Selgita, kuidas [sinu valitud teema] töötab ja millised 
-on peamised turvariskid.
+═══════════════════════════════════════════════════
+ÕPPEPAKETT: [sinu teema]
+═══════════════════════════════════════════════════
+
+AUTOR: [sinu nimi]
+KUUPÄEV: [kuupäev]
+ALLIKAD: [loetelu kasutatud allikatest]
+
+───────────────────────────────────────────────────
+1. KOKKUVÕTE
+[sinu parandatud kokkuvõte siia]
+
+───────────────────────────────────────────────────
+2. PÕHIMÕISTED
+[sõnastik siia]
+
+───────────────────────────────────────────────────
+3. HARJUTUSKÜSIMUSED
+[parandatud küsimused siia]
+[vastused eraldi lehel / dokumendi lõpus]
+
+───────────────────────────────────────────────────
+4. AUDIO KOKKUVÕTE
+[link või märge, et audio on genereeritud]
+
+───────────────────────────────────────────────────
+ENESEHINNANG:
+- Tugevaim osa mu materjalis: [...]
+- Mida tahaksin veel parandada: [...]
+═══════════════════════════════════════════════════
 ```
 
-Võrdle:
+!!! warning "Kvaliteedikontroll"
+    Enne esitamist veendu:
 
-| Aspekt | NotebookLM | ChatGPT |
-|---|---|---|
-| Kas allikad on nähtavad? | | |
-| Kas vastus on kontrollitav? | | |
-| Kas esineb hallutsinatsioone? | | |
-| Kumb on põhjalikum? | | |
-
-!!! warning "Oluline erinevus"
-    NotebookLM vastab **ainult** sinu allikate põhjal — kui allikates pole infot, ütleb ta seda. ChatGPT vastab alati, isegi kui ta tegelikult ei tea. See erinevus on kriitiline, kui töötad tundlike andmetega.
+    - [ ] Kõik väited põhinevad allikatel
+    - [ ] Küsimuste vastused on kontrollitud
+    - [ ] Klassikaaslane on küsimusi testinud
+    - [ ] Audio kokkuvõte on genereeritud
 
 ---
 
@@ -148,8 +204,8 @@ Võrdle:
 
 Selles praktikumis sa:
 
-- Lõid oma NotebookLM notebook'i ja laadisid üles allikaid
-- Kogesid, kuidas allikatepõhine AI erineb tavalisest vestlusrobotist
-- Genereerisid küsimusi ja audio kokkuvõtteid oma materjalidest
-- Kontrollisid AI väidete vastavust algallikatega
-- Võrdlesid allikatepõhist ja vabavormilist AI-d
+- Lõid NotebookLM-is oma teema kohta allikapõhise tööruumi
+- Genereerisid kokkuvõtte, sõnastiku ja harjutusküsimused
+- Lõid audiokokkuvõtte kordamiseks
+- Testisid materjali klassikaaslase peal ja parandasid tagasiside põhjal
+- Pakid kõik kokku kasutatavaks õppepaketiks

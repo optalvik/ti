@@ -126,19 +126,24 @@ AI eetika pole abstraktne filosoofia — see on praktiline küsimus, mis mõjuta
 ## Enesekontroll
 
 ??? question "1. Miks ei piisa kallutatuse vähendamiseks ainult tundlike tunnuste (sugu, rass) eemaldamisest andmetest?"
-    Mudel leiab kaudsed tunnused (*proxy variables*), mis korreleeruvad tundlike tunnustega. Näiteks teatud hobid, koolid, elurajoonid või sõnakasutus võivad tugevalt korreleeruda soo või rassiga. Mudel kasutab neid kaudseid tunnuseid, isegi kui otsesed tunnused on eemaldatud. Kallutatuse vähendamine nõuab pidevat auditeerimist ja mitmekesiseid andmeid.
+    ??? success "Vastus"
+        Mudel leiab kaudsed tunnused (*proxy variables*), mis korreleeruvad tundlike tunnustega. Näiteks teatud hobid, koolid, elurajoonid või sõnakasutus võivad tugevalt korreleeruda soo või rassiga. Mudel kasutab neid kaudseid tunnuseid, isegi kui otsesed tunnused on eemaldatud. Kallutatuse vähendamine nõuab pidevat auditeerimist ja mitmekesiseid andmeid.
 
 ??? question "2. Millisesse EU AI Act riskikategooriasse kuulub AI-põhine värbamissüsteem ja mida see tähendab?"
-    Kõrge riskiga süsteem. See tähendab, et süsteem vajab dokumenteerimist, regulaarset auditeerimist, inimjärelevalvet ja riskihindamist. Arendaja peab tagama läbipaistvuse ja kasutaja peab teadma, et AI osaleb otsustusprotsessis.
+    ??? success "Vastus"
+        Kõrge riskiga süsteem. See tähendab, et süsteem vajab dokumenteerimist, regulaarset auditeerimist, inimjärelevalvet ja riskihindamist. Arendaja peab tagama läbipaistvuse ja kasutaja peab teadma, et AI osaleb otsustusprotsessis.
 
 ??? question "3. Mis on prompt injection ja miks see on ohtlik?"
-    Prompt injection on rünne, kus pahatahtlik juhis peidetakse näiliselt süütu sisendi sisse — näiteks e-kirja, veebilehe või dokumendi teksti. Kui AI agent selle sisendi töötleb, võib ta peidetud juhist järgida, sest ta ei suuda alati eristada kasutaja tegelikku juhist pahatahtlikust sisendist. See on ohtlik, sest agent võib lekitada andmeid, teha autoriseerimata toiminguid või käituda etteaimamatult.
+    ??? success "Vastus"
+        Prompt injection on rünne, kus pahatahtlik juhis peidetakse näiliselt süütu sisendi sisse — näiteks e-kirja, veebilehe või dokumendi teksti. Kui AI agent selle sisendi töötleb, võib ta peidetud juhist järgida, sest ta ei suuda alati eristada kasutaja tegelikku juhist pahatahtlikust sisendist. See on ohtlik, sest agent võib lekitada andmeid, teha autoriseerimata toiminguid või käituda etteaimamatult.
 
 ??? question "4. Miks on oluline dokumenteerida AI kasutamist organisatsioonis?"
-    Esiteks nõuab EU AI Act kõrge riskiga süsteemide dokumenteerimist. Teiseks on auditeerimiseks vaja teada, kus ja kuidas AI-d kasutatakse. Kolmandaks — kui midagi läheb valesti (vale otsus, andmeleke, kallutatus), peab saama jälgida, millised AI süsteemid olid kaasatud ja kuidas otsus tehti.
+    ??? success "Vastus"
+        Esiteks nõuab EU AI Act kõrge riskiga süsteemide dokumenteerimist. Teiseks on auditeerimiseks vaja teada, kus ja kuidas AI-d kasutatakse. Kolmandaks — kui midagi läheb valesti (vale otsus, andmeleke, kallutatus), peab saama jälgida, millised AI süsteemid olid kaasatud ja kuidas otsus tehti.
 
 ??? question "5. Millistel juhtudel peaksid kasutama lokaalset mudelit pilveteenuse asemel?"
-    Kui töötad isikuandmete, patsiendiandmete, finantsandmete, ärisaladuste, konfidentsiaalse koodiga või muude tundlike andmetega, mis ei tohi ettevõttest lahkuda. Samuti kui GDPR või muu regulatsioon piirab andmete töötlemist kolmandate osapoolte serverites. Lokaalne mudel (nt Ollama) tagab, et andmed ei lahku sinu masinast.
+    ??? success "Vastus"
+        Kui töötad isikuandmete, patsiendiandmete, finantsandmete, ärisaladuste, konfidentsiaalse koodiga või muude tundlike andmetega, mis ei tohi ettevõttest lahkuda. Samuti kui GDPR või muu regulatsioon piirab andmete töötlemist kolmandate osapoolte serverites. Lokaalne mudel (nt Ollama) tagab, et andmed ei lahku sinu masinast.
 
 [^amazon_bias]: Dastin, J. (2018). Amazon scraps secret AI recruiting tool that showed bias against women. *Reuters*. https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G
 [^buolamwini]: Buolamwini, J. & Gebru, T. (2018). Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. *Proceedings of Machine Learning Research*, 81, 1–15. http://proceedings.mlr.press/v81/buolamwini18a.html

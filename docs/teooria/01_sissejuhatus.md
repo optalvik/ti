@@ -30,7 +30,8 @@ See on põhimõtteline erinevus. Traditsiooniline programm järgib *reegleid*, t
     ??? tip "Vihje"
         Mõtle sellele, kui palju e-kirju oled oma elu jooksul näinud. Sa oled *mustrid* ise ära õppinud.
 
-    ✅ **Vastus:** Inimese intuitsioon on sageli teadvustamata mustrituvastus — sa oled tuhandeid e-kirju näinud ja aju on ise õppinud tunnused eristama. AI teeb sisuliselt sama asja, ainult et matemaatiliselt ja palju suurema andmehulgaga.
+    ??? success "Vastus"
+        Inimese intuitsioon on sageli teadvustamata mustrituvastus — sa oled tuhandeid e-kirju näinud ja aju on ise õppinud tunnused eristama. AI teeb sisuliselt sama asja, ainult et matemaatiliselt ja palju suurema andmehulgaga.
 
 !!! info "Definitsioon"
     **Tehisintellekt** (AI, *Artificial Intelligence*) on arvutisüsteem, mis suudab täita ülesandeid, mille lahendamine nõuab tavaliselt inimese intellekti — näiteks keele mõistmine, mustrite tuvastamine, otsuste tegemine ja õppimine kogemusest.[^russell]
@@ -59,7 +60,8 @@ Esialgne entusiasm jahenes kiiresti. Selgus, et pertseptron ei suuda lahendada i
     ??? tip "Vihje"
         Mõtle kolmele asjale, mis on praegu olemas, aga 1980ndatel ei olnud: andmete hulk, arvutusvõimsus ja algoritmide kvaliteet.
 
-    ✅ **Vastus:** Seekord toetab AI-d kolm sammast, mida varem ei olnud: (1) internet on andnud triljoneid sõnu treenimisandmeid, (2) GPU-d pakuvad tohutut paralleelset arvutusvõimsust, (3) Transformer-arhitektuur on tõhusam kui varasemad algoritmid. Samas — ka praegune entusiasm sisaldab ülepaisutatud lubadusi (AGI "järgmisel aastal"), mis on sarnane varasematele talvedele. Terve skeptitsism on alati põhjendatud.
+    ??? success "Vastus"
+        Seekord toetab AI-d kolm sammast, mida varem ei olnud: (1) internet on andnud triljoneid sõnu treenimisandmeid, (2) GPU-d pakuvad tohutut paralleelset arvutusvõimsust, (3) Transformer-arhitektuur on tõhusam kui varasemad algoritmid. Samas — ka praegune entusiasm sisaldab ülepaisutatud lubadusi (AGI "järgmisel aastal"), mis on sarnane varasematele talvedele. Terve skeptitsism on alati põhjendatud.
 
 ### Sügavõppe revolutsioon (2010ndad)
 
@@ -184,7 +186,8 @@ IT-süsteemide spetsialistina puutud AI-ga kokku igapäevaselt. Siin on mõned k
     ??? tip "Vihje"
         Mõtle GPS-ile. Kui alati kasutad navigaatorit, kas sa oskad veel ilma selleta sõita? Mis juhtub, kui GPS ei tööta?
 
-    ✅ **Vastus:** See on reaalne risk. Juuniorarendaja, kes ei kirjuta kunagi koodi ilma Copilotita, ei pruugi kunagi arendada sügavat koodimõistmist. IT-spetsialist, kes laseb AI-l alati konfiguratsioone genereerida, ei pruugi märgata turvanõrkust. Võti on tasakaal: kasuta AI-d efektiivsuse jaoks, aga veendu, et mõistad, mida AI toodab. **Kasuta → Kahtlusta → Kontrolli.**
+    ??? success "Vastus"
+        See on reaalne risk. Juuniorarendaja, kes ei kirjuta kunagi koodi ilma Copilotita, ei pruugi kunagi arendada sügavat koodimõistmist. IT-spetsialist, kes laseb AI-l alati konfiguratsioone genereerida, ei pruugi märgata turvanõrkust. Võti on tasakaal: kasuta AI-d efektiivsuse jaoks, aga veendu, et mõistad, mida AI toodab. **Kasuta → Kahtlusta → Kontrolli.**
 
 ---
 
@@ -228,31 +231,36 @@ Tehisintellekt ei ole üks konkreetne tehnoloogia, vaid lai valdkond, mis hõlma
     ??? tip "Vihje"
         Mõtle Spotify soovitusalgoritmi peale. Kas ta suudaks samal ajal ka autot juhtida?
 
-    ✅ **Vastus:** ANI on süsteem, mis oskab teha *ühte* konkreetset ülesannet hästi (nt pildituvastus, teksti genereerimine, rämpsposti filtreerimine). AGI oleks süsteem, mis suudab *ükskõik millist* intellektuaalset ülesannet — sealhulgas õppida uusi asju ilma ümbertreenimiseta ja mõista konteksti. AGI-d ei ole veel olemas.
+    ??? success "Vastus"
+        ANI on süsteem, mis oskab teha *ühte* konkreetset ülesannet hästi (nt pildituvastus, teksti genereerimine, rämpsposti filtreerimine). AGI oleks süsteem, mis suudab *ükskõik millist* intellektuaalset ülesannet — sealhulgas õppida uusi asju ilma ümbertreenimiseta ja mõista konteksti. AGI-d ei ole veel olemas.
 
 ??? question "2. Mis toimus Dartmouthi konverentsil 1956. aastal ja miks see oluline on?"
     ??? tip "Vihje"
         Enne seda konverentsi ei olnud valdkonnal isegi nime. Mis muutus?
 
-    ✅ **Vastus:** Dartmouthi konverentsil anti tehisintellekti valdkonnale ametlik nimi (*Artificial Intelligence*). John McCarthy, Marvin Minsky ja teised teadlased kogunesid arutama, kas masinad suudavad mõelda. See märgib AI kui iseseisva teadusvaldkonna sündi.
+    ??? success "Vastus"
+        Dartmouthi konverentsil anti tehisintellekti valdkonnale ametlik nimi (*Artificial Intelligence*). John McCarthy, Marvin Minsky ja teised teadlased kogunesid arutama, kas masinad suudavad mõelda. See märgib AI kui iseseisva teadusvaldkonna sündi.
 
 ??? question "3. Nimeta kolm konkreetset AI rakendust IT-süsteemide haldamises."
     ??? tip "Vihje"
         Mõtle igapäevasele IT-tööle: logid, skriptid, kasutajatugi...
 
-    ✅ **Vastus:** (1) Anomaaliate tuvastamine logidest ja monitooringust — AI märkab ebanormaalset käitumist. (2) Automaatne koodi genereerimine tööriistadega nagu Copilot või Claude Code. (3) AI-põhised vestlusrobotid kasutajatoe piletite sorteerimiseks.
+    ??? success "Vastus"
+        (1) Anomaaliate tuvastamine logidest ja monitooringust — AI märkab ebanormaalset käitumist. (2) Automaatne koodi genereerimine tööriistadega nagu Copilot või Claude Code. (3) AI-põhised vestlusrobotid kasutajatoe piletite sorteerimiseks.
 
 ??? question "4. Miks ei ole ChatGPT ja Claude üldine tehisintellekt (AGI)?"
     ??? tip "Vihje"
         Mõtle sellele, mida LLM tegelikult teeb ühe sõnaga: ta ... järgmist tokenit.
 
-    ✅ **Vastus:** Need süsteemid on tõenäosuslikud teksti generaatorid — nad *ennustavad* järgmist tokenit väga hästi, aga neil pole maailmamõistmist, kogemust ega teadvust. Nad on "Gutenbergi pärijad" — treenitud tekstil, mitte füüsilisel kogemusel. Nad *teavad*, mis on lõhn, sest on lugenud miljoneid kirjeldusi, aga ei *tunne* seda.
+    ??? success "Vastus"
+        Need süsteemid on tõenäosuslikud teksti generaatorid — nad *ennustavad* järgmist tokenit väga hästi, aga neil pole maailmamõistmist, kogemust ega teadvust. Nad on "Gutenbergi pärijad" — treenitud tekstil, mitte füüsilisel kogemusel. Nad *teavad*, mis on lõhn, sest on lugenud miljoneid kirjeldusi, aga ei *tunne* seda.
 
 ??? question "5. Mis on AI talv ja miks neid on olnud mitu?"
     ??? tip "Vihje"
         Mõtle Dartmouthi lubadusele "ühe suve jooksul" ja sellele, mis tegelikult juhtus.
 
-    ✅ **Vastus:** AI talv on periood, mil huvi ja rahastus AI uurimisse kahaneb järsult. Talved tekivad, sest ootused ületavad reaalseid tulemusi. Esimene talv tuli pärast pertseptroni piirangute avastamist (1970ndad), teine pärast ekspertsüsteemide läbikukkumist (1990ndad). Muster on alati sama: liiga palju lubatakse liiga vara.
+    ??? success "Vastus"
+        AI talv on periood, mil huvi ja rahastus AI uurimisse kahaneb järsult. Talved tekivad, sest ootused ületavad reaalseid tulemusi. Esimene talv tuli pärast pertseptroni piirangute avastamist (1970ndad), teine pärast ekspertsüsteemide läbikukkumist (1990ndad). Muster on alati sama: liiga palju lubatakse liiga vara.
 
 [^russell]: Russell, S. & Norvig, P. (2021). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson. https://aima.cs.berkeley.edu/
 [^turing]: Turing, A. M. (1950). Computing Machinery and Intelligence. *Mind*, 59(236), 433–460. https://doi.org/10.1093/mind/LIX.236.433

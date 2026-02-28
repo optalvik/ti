@@ -153,19 +153,24 @@ AI agendid erinevad vestlusrobotitest selle poolest, et nad suudavad planeerida,
 ## Enesekontroll
 
 ??? question "1. Mis vahe on vestlusrobotil ja AI agendil?"
-    Vestlusrobot töötab ühe vooru kaupa: sa küsid, ta vastab. Agent saab ülesande ja teeb mitu sammu iseseisvalt: planeerib, valib tööriista, käivitab selle, hindab tulemust ja kordab vajadusel. Agent suudab kasutada väliseid tööriistu (failide lugemine, API päringud, veebiotsing), mida vestlusrobot ei suuda.
+    ??? success "Vastus"
+        Vestlusrobot töötab ühe vooru kaupa: sa küsid, ta vastab. Agent saab ülesande ja teeb mitu sammu iseseisvalt: planeerib, valib tööriista, käivitab selle, hindab tulemust ja kordab vajadusel. Agent suudab kasutada väliseid tööriistu (failide lugemine, API päringud, veebiotsing), mida vestlusrobot ei suuda.
 
 ??? question "2. Mis on MCP ja millise probleemi see lahendab?"
-    MCP (Model Context Protocol) on avatud standard, mis standardiseerib suhtluse AI agendi ja väliste tööriistade vahel. Ilma MCP-ta vajab iga agendi ja tööriista kombinatsioon eraldi integratsiooni (N×M). MCP-ga piisab N+M integratsioonist — iga tööriist kirjutatakse ühe korra ja töötab kõigi MCP-toetavate agentidega.
+    ??? success "Vastus"
+        MCP (Model Context Protocol) on avatud standard, mis standardiseerib suhtluse AI agendi ja väliste tööriistade vahel. Ilma MCP-ta vajab iga agendi ja tööriista kombinatsioon eraldi integratsiooni (N×M). MCP-ga piisab N+M integratsioonist — iga tööriist kirjutatakse ühe korra ja töötab kõigi MCP-toetavate agentidega.
 
 ??? question "3. Millised on agentlike süsteemide peamised riskid?"
-    (1) Vead võimenduvad — viga ühes sammus mõjutab kõiki järgnevaid. (2) Hallutsinatsioonid tegudes — agent võib teha tegevusi, mida ei palutud, näiteks käivitada vale käsu. (3) Ligipääsu risk — liiga laiad õigused tähendavad, et agendi viga võib põhjustada suuremat kahju (kustutatud failid, lekkinud andmed). Lahendus on *least privilege* põhimõte.
+    ??? success "Vastus"
+        (1) Vead võimenduvad — viga ühes sammus mõjutab kõiki järgnevaid. (2) Hallutsinatsioonid tegudes — agent võib teha tegevusi, mida ei palutud, näiteks käivitada vale käsu. (3) Ligipääsu risk — liiga laiad õigused tähendavad, et agendi viga võib põhjustada suuremat kahju (kustutatud failid, lekkinud andmed). Lahendus on *least privilege* põhimõte.
 
 ??? question "4. Millest koosneb AI agent?"
-    Agent koosneb kolmest põhiosast: (1) LLM kui "aju" — teeb otsuseid, planeerib järgmist sammu, valib tööriista; (2) tööriistad — failide lugemine, API päringud, veebiotsing, koodi käivitamine; (3) mälu ja kontekst — peab meeles, mida on juba tehtud ja millised tulemused saadi, et vajaduse korral itereerida.
+    ??? success "Vastus"
+        Agent koosneb kolmest põhiosast: (1) LLM kui "aju" — teeb otsuseid, planeerib järgmist sammu, valib tööriista; (2) tööriistad — failide lugemine, API päringud, veebiotsing, koodi käivitamine; (3) mälu ja kontekst — peab meeles, mida on juba tehtud ja millised tulemused saadi, et vajaduse korral itereerida.
 
 ??? question "5. Too näide, kuidas AI agent IT-intsidenti uurib."
-    Agent saab teate "Server X ei vasta" ja tegutseb iseseisvalt: (1) kontrollib serveri staatust monitooringust, (2) loeb viimaseid logisid, (3) kontrollib ketaste ja mälu kasutust, (4) vaatab viimaseid muudatusi Git logist, (5) koostab raporti tõenäolise põhjuse ja lahendusettepanekuga. Inimene ei pidanud iga sammu käsitsi juhtima.
+    ??? success "Vastus"
+        Agent saab teate "Server X ei vasta" ja tegutseb iseseisvalt: (1) kontrollib serveri staatust monitooringust, (2) loeb viimaseid logisid, (3) kontrollib ketaste ja mälu kasutust, (4) vaatab viimaseid muudatusi Git logist, (5) koostab raporti tõenäolise põhjuse ja lahendusettepanekuga. Inimene ei pidanud iga sammu käsitsi juhtima.
 
 [^mcp]: Anthropic. (2024). *Introducing the Model Context Protocol*. https://www.anthropic.com/news/model-context-protocol
 [^mcp_servers]: Model Context Protocol. (2024). *MCP Servers — Reference Implementations*. GitHub. https://github.com/modelcontextprotocol/servers

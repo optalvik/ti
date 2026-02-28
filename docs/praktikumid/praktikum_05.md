@@ -7,13 +7,20 @@ tags:
 
 Selles praktikumis treenid oma esimese masinõppe mudeli. Teachable Machine on Google'i tasuta tööriist, mis laseb visuaalselt näha, kuidas mudel õpib — ilma ühegi koodirea kirjutamiseta.
 
+!!! abstract "Eesmärgid"
+    Selle praktikumi lõpuks:
+
+    - Oled treeninud oma pildituvastuse mudeli
+    - Tead, kuidas treeningandmed mõjutavad mudeli kvaliteeti
+    - Mõistad, mis on ülesobitus (overfitting) ja andmete kallutatus (bias)
+
 !!! info "Vajalik"
     - **Teachable Machine:** [teachablemachine.withgoogle.com](https://teachablemachine.withgoogle.com)
     - Veebikaamera (sülearvuti kaamera sobib)
 
 ---
 
-## Osa 1: Esimene mudel — käeliigutuste tuvastamine
+## Osa 1: Treeni oma esimene mudel
 
 ### Samm 1: Ava Teachable Machine
 
@@ -21,125 +28,148 @@ Mine [teachablemachine.withgoogle.com](https://teachablemachine.withgoogle.com) 
 
 ### Samm 2: Loo klassid
 
-Näed ekraanil kahte klassi (Class 1, Class 2). Nimeta need ümber:
+Näed ekraanil kahte klassi. Nimeta need ümber:
 
 - **Class 1:** "Pöial üles"
 - **Class 2:** "Pöial alla"
 
-Lisa ka kolmas klass (vajuta **Add a class**):
+Lisa kolmas klass (**Add a class**):
 
-- **Class 3:** "Tühi" (mitte midagi näidata)
+- **Class 3:** "Tühi" (taust ilma käeta)
 
 ### Samm 3: Kogu treeningandmeid
 
 Iga klassi juures vajuta **Webcam** ja hoia nuppu all:
 
-- **Pöial üles:** näita kaamerale pöialt üles, liiguta kätt veidi (eri nurgad, eri kaugused). Kogu vähemalt **50 pilti**
-- **Pöial alla:** sama, aga pöial alla. Vähemalt **50 pilti**
-- **Tühi:** kaamera ette mitte midagi panna. Vähemalt **30 pilti**
+| Klass | Mida näidata | Pilte vähemalt |
+|---|---|---|
+| Pöial üles | Pöial üles, liiguta kätt eri nurkadesse | 50 |
+| Pöial alla | Pöial alla, eri nurgad ja kaugused | 50 |
+| Tühi | Ainult taust, ilma käeta | 30 |
 
 !!! tip "Miks mitu nurka?"
-    Mida rohkem variatsiooni treeningandmetes, seda paremini mudel üldistab. Kui treenid ainult ühest nurgast, ei tunne mudel teist nurka ära. See on masinõppe põhireegel.
+    Mida rohkem variatsioone treeningandmetes, seda paremini mudel üldistab. Kui treenid ainult ühest nurgast, ei tunne mudel teist nurka ära.
 
-### Samm 4: Treeni mudel
+### Samm 4: Treeni
 
-Vajuta **Train Model**. Oota, kuni treenimine lõpeb (tavaliselt 10-30 sekundit).
+Vajuta **Train Model**. Treenimine võtab 10-30 sekundit.
 
 ### Samm 5: Testi
 
-Treenimine valmis? Nüüd näed paremal **Preview** akent. Näita kaamerale erinevaid liigutusi ja vaata:
+Paremal on **Preview** aken. Näita kaamerale erinevaid liigutusi ja jälgi:
 
 - Kas mudel tunneb õigesti ära?
 - Milline on **usaldusskoor** (confidence) iga klassi juures?
-- Kas mõni liigutus ajab mudeli segadusse?
+- Millal mudel eksib?
 
 ---
 
-## Osa 2: Mudeli täiustamine
+## Osa 2: Paranda mudelit
 
-### Ülesanne 1: Vigade analüüs
+### Ülesanne 1: Leia vead
 
-Leia olukordi, kus mudel eksib. Täida tabel:
+Proovi leida olukordi, kus mudel eksib. Testi:
 
-| Olukord | Mida näitasin | Mida mudel arvas | Usaldusskoor |
+- Teine käsi (vasak vs parem)
+- Teine kaugus kaamerast
+- Teine taustavalgus
+- Klassikaaslase käsi
+
+Täida tabel:
+
+| Mida näitasin | Mida mudel arvas | Usaldusskoor | Miks eksis? |
 |---|---|---|---|
 | | | | |
 | | | | |
 | | | | |
 
-### Ülesanne 2: Rohkem andmeid
+### Ülesanne 2: Lisa andmeid ja treeni uuesti
 
-Lisa treeningandmeid nendele klassidele, kus mudel eksib. Treeni uuesti ja kontrolli:
+Lisa treeningandmeid nendele klassidele, kus mudel eksib. Treeni uuesti.
 
 - Kas täpsus paranes?
 - Kas mõni teine klass muutus halvemaks?
 
-See on masinõppe iteratiivne protsess: treeni → testi → paranda → korda.
+See on masinõppe põhitsükkel: **treeni → testi → paranda → korda**.
 
-### Ülesanne 3: Lisa uus klass
+### Ülesanne 3: Lisa neljas klass
 
-Lisa neljas klass, näiteks "Rusikas" või "Avatud peopesa". Kogu andmed ja treeni uuesti.
-
-Küsimused:
+Lisa uus klass, näiteks "Rusikas" või "Avatud peopesa". Kogu andmed ja treeni uuesti.
 
 - Kas mudel suudab nelja klassi eristada?
 - Milline klass segab kõige rohkem?
-- Mida saaksid teha, et täpsust parandada?
 
 ---
 
-## Osa 3: Andmete mõju mudeli kvaliteedile
+## Osa 3: Katseta andmete mõju
 
-### Ülesanne 4: Vähe andmeid vs palju andmeid
+### Ülesanne 4: Vähe vs palju andmeid
 
-Loo uus Image Project ja tee sama katse, aga seekord kogu ühele klassile ainult **10 pilti** ja teisele **100 pilti**.
+Loo **uus** Image Project. Tee sama katse, aga seekord:
 
-Treeni ja testi. Täida:
+- Üks klass: **10 pilti**
+- Teine klass: **100 pilti**
 
-| Klass | Treeningpilte | Täpsus |
+Treeni ja testi:
+
+| Klass | Treeningpilte | Täpsus (hinnanguline) |
 |---|---|---|
-| Vähe andmeid (10) | | |
-| Palju andmeid (100) | | |
+| Vähe andmeid (10) | 10 | |
+| Palju andmeid (100) | 100 | |
 
 Mida see näitab andmete hulga mõju kohta?
 
 ### Ülesanne 5: Tausta mõju
 
-Treeni mudel ühes kohas (nt klassiruumis). Seejärel testi seda **teises kohas** (nt koridoris või kodus). Kas täpsus muutub?
+Treeni mudel ühes kohas (nt klassiruumis). Seejärel testi seda **teises kohas** (koridoris, kodus, väljas).
 
-See demonstreerib olulist probleemi: mudel võib õppida ära **tausta**, mitte objekti enda.
+- Kas täpsus muutub?
+- Mida see tähendab?
+
+!!! warning "Oluline avastus"
+    Kui mudeli täpsus langeb uues kohas, tähendab see, et mudel õppis ära **tausta**, mitte sinu käeliigutuse. See on päris masinõppes väga levinud probleem.
 
 ---
 
-## Osa 4: Dokumenteerimine ja järeldused
+## Osa 4: Seosta teooriaga
 
-### Ülesanne 6: Projekti kokkuvõte
+### Ülesanne 6: Mõtesta oma kogemust
 
-Täida oma katse kohta:
+Vasta oma katsetuste põhjal:
+
+**Treeningandmed:**
+
+- Miks on rohkem andmeid parem?
+- Mis juhtub, kui ühe klassi andmeid on teistest palju vähem?
+
+**Ülesobitus (overfitting):**
+
+- Kas sinu mudel töötas ainult sinu käega hästi, aga klassikaaslase käega halvasti?
+- Miks see juhtub ja kuidas seda vältida?
+
+**Kallutatus (bias):**
+
+- Kui treenisid mudelit ainult enda käega — kas see on kallutatuse näide?
+- Too üks näide, kuidas andmete kallutatus võib päriselus probleeme tekitada (nt näotuvastus, laenuhindamine)
+
+---
+
+## Osa 5: Dokumenteeri oma projekt
+
+Täida oma katse kohta projekti kokkuvõte:
 
 | Väli | Sinu vastus |
 |---|---|
 | Klassid | |
 | Treeningnäiteid kokku | |
 | Treenimisaeg | |
-| Täpsus (hinnanguline) | |
+| Täpsus (hinnanguline %) | |
 | Suurim probleem | |
-| Kuidas lahendasid? | |
+| Kuidas lahendasid | |
+| Mis üllatas | |
 
----
-
-## Osa 5: Mõtestamine
-
-### Ülesanne 7: Seosta teooriaga
-
-Vasta oma kogemuse põhjal:
-
-1. **Treeningandmed:** miks on rohkem andmeid parem? Mis juhtub, kui ühe klassi andmeid on teistest palju vähem?
-2. **Ülesobitus (overfitting):** kas sinu mudel töötas ainult sinu käega hästi, aga klassikaaslase käega halvasti? Miks?
-3. **Bias:** kui treenisid mudelit ainult enda käega, kas see on kallutatuse näide? Kuidas see päriselus probleeme tekitab?
-
-!!! warning "Päriselus"
-    Teachable Machine on lihtne demo. Päris masinõppe mudelid vajavad tuhandeid-miljoneid näiteid, kallimaid GPU-sid ja nädalaid treenimist. Aga põhimõte on sama — andmed sisse, muster välja.
+!!! info "Päriselus"
+    Teachable Machine on lihtne demo. Päris masinõppe mudelid vajavad tuhandeid-miljoneid näiteid, võimsamaid GPU-sid ja nädalaid treenimist. Aga põhimõte on täpselt sama — andmed sisse, mustrid välja.
 
 ---
 
@@ -147,8 +177,8 @@ Vasta oma kogemuse põhjal:
 
 Selles praktikumis sa:
 
-- Treenisid oma esimese pildituvastuse mudeli Teachable Machine'is
+- Treenisid oma esimese pildituvastuse mudeli
 - Kogesid masinõppe iteratiivset protsessi: treeni → testi → paranda
-- Nägid, kuidas treeningandmete hulk ja kvaliteet mõjutavad tulemust
-- Avastasid, et mudel võib õppida tausta, mitte objekti enda
-- Seostasid praktilise kogemuse teooriaga (bias, overfitting, andmekvaliteet)
+- Nägid, kuidas andmete hulk ja kvaliteet mõjutavad tulemust
+- Avastasid tausta mõju probleemi
+- Seostasid praktilise kogemuse teooriaga (bias, overfitting)

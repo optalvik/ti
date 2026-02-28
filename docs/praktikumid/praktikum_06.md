@@ -3,225 +3,242 @@ tags:
   - Praktikum
 ---
 
-# Praktikum 6: Koodi genereerimine ChatGPT abil
+# Praktikum 6: Lõpuprojekt — ehita oma IT-tööriist
 
-Selles praktikumis kasutad ChatGPT-d koodi genereerimiseks, analüüsimiseks ja vigade parandamiseks. Sa ei pea olema programmeerija — eesmärk on mõista, kuidas AI aitab IT-spetsialistil skripte luua ja hallata.
+Selles praktikumis ehitad AI abiga **päris töötava tööriista**, mida saad IT-töös kasutada. Sa valid projekti, genereerid koodi, testid seda ja dokumenteerid tulemuse. See on kõige praktilisem praktikum — sinu tulemus on töötav skript.
+
+!!! abstract "Eesmärgid"
+    Selle praktikumi lõpuks:
+
+    - Oled AI abiga loonud töötava IT-skripti
+    - Oskad AI-genereeritud koodi lugeda, testida ja parandada
+    - Tead, millal AI-kood töötab otse ja millal vajab käsitsi parandamist
+    - Oled dokumenteerinud oma tööriista nii, et teine inimene saaks seda kasutada
 
 !!! info "Vajalik konto"
-    - **ChatGPT:** kooli konto (OpenAI Edu litsents) või tasuta konto aadressil [chat.openai.com](https://chat.openai.com)
+    - **ChatGPT:** [chat.openai.com](https://chat.openai.com) või **Claude:** [claude.ai](https://claude.ai)
+
+!!! warning "Oluline reegel"
+    **Ära kunagi käivita koodi, millest sa aru ei saa.** Kui AI genereerib midagi, mida sa ei mõista, küsi AI-lt: "Selgita, mida see rida teeb." Või küsi õpetajalt.
 
 ---
 
-## Osa 1: Esimene skript
+## Osa 1: Vali projekt
 
-### Samm 1: Lihtne Bashi skript
+Vali üks järgmistest projektidest (või paku ise):
 
-Esita ChatGPT-le:
+### Valik A: Veebilehe monitor
+
+Skript, mis kontrollib, kas veebileht on kättesaadav, ja logib tulemused faili.
+
+- **Keel:** Bash või Python
+- **Väljund:** logifail kuupäeva, URL-i ja staatusega
+- **Raskus:** Algaja
+
+### Valik B: Süsteemiinfo koguja
+
+Skript, mis kogub arvuti kohta olulist infot (OS, RAM, ketas, IP) ja koostab raporti.
+
+- **Keel:** Bash või Python
+- **Väljund:** loetav raport tekstifailina
+- **Raskus:** Algaja
+
+### Valik C: Failikorraldaja
+
+Skript, mis sorteerib allalaadimiste kausta failid kaustadesse tüübi järgi (.pdf → Dokumendid, .jpg → Pildid jne).
+
+- **Keel:** Python
+- **Väljund:** sorteeritud kaustastruktuur
+- **Raskus:** Keskmine
+
+### Valik D: Logide analüüsija
+
+Skript, mis loeb logifaili ja leiab veateateid, sorteerib need sageduse järgi.
+
+- **Keel:** Bash või Python
+- **Väljund:** kokkuvõte levinumatest vigadest
+- **Raskus:** Keskmine
+
+### Valik E: Oma idee
+
+Kui sul on oma idee IT-tööriista kohta — paku see õpetajale ja hakka tööle.
+
+**Minu valik:** _______________
+
+---
+
+## Osa 2: Spetsifikatsioon
+
+Enne koodi genereerimist kirjuta üles, **mida** su tööriist peab tegema. See on spetsifikatsioon.
+
+Täida:
+
+| Väli | Sinu vastus |
+|---|---|
+| Tööriista nimi | |
+| Mida see teeb (1-2 lauset) | |
+| Sisend (mida kasutaja annab) | |
+| Väljund (mida kasutaja saab) | |
+| Programmeerimiskeel | |
+| Mis OS-is peab töötama | |
+
+!!! tip "Miks spetsifikatsioon enne koodi?"
+    Kui tead täpselt, mida tahad, saad AI-le anda parema prompti. Ja hiljem saad kontrollida, kas tulemus vastab sellele, mida soovisid.
+
+---
+
+## Osa 3: Genereeri kood
+
+### Samm 1: Esimene prompt
+
+Koosta AI-le prompt, mis sisaldab sinu spetsifikatsiooni. Näide:
 
 ```text
-Kirjuta Bashi skript, mis kontrollib, kas veebileht on kättesaadav. 
-Skript võtab argumendina URL-i, teeb curl päringu ja 
-ütleb kas sait vastab (HTTP 200) või mitte.
-Kommenteeri iga rida eesti keeles.
+Kirjuta [Bashi/Pythoni] skript, mis [mida skript teeb].
+
+Nõuded:
+- [sisend]
+- [väljund]
+- [OS]
+- Kommenteeri iga oluline rida eesti keeles
+- Lisa vigade käsitlemine (nt kui fail puudub, kui URL ei vasta)
 ```
 
-### Samm 2: Analüüsi vastust
+### Samm 2: Loe kood läbi
 
-Enne koodi käivitamist loe see läbi ja vasta:
+**Enne käivitamist** loe kogu kood läbi. Iga rea kohta mõtle:
+
+- Kas saan aru, mida see rida teeb?
+- Kas see on turvaline? (Kas kustutab midagi? Kas saadab andmeid kuhugi?)
+- Kas see teeb seda, mida ma spetsifikatsioonis kirjeldasin?
+
+Kui miski on arusaamatu, küsi AI-lt:
+
+```text
+Selgita selle skripti ridu 5-12. Mida iga rida täpselt teeb?
+```
+
+### Samm 3: Märgi üles
 
 | Küsimus | Sinu vastus |
 |---|---|
-| Kas saad igast reast aru? | |
-| Kas kommentaarid on arusaadavad? | |
-| Kas skript käsitleb vigu (nt kui URL puudub)? | |
-| Kas sa julged seda käivitada? | |
-
-### Samm 3: Testi skripti
-
-Kopeeri skript tekstifaili, salvesta nimega `check_site.sh` ja käivita:
-
-```bash
-chmod +x check_site.sh
-./check_site.sh https://www.google.com
-./check_site.sh https://seda-saiti-pole-olemas.ee
-```
-
-!!! warning "Turvarisk"
-    **Ära kunagi käivita koodi, millest sa aru ei saa.** Kui AI genereerib midagi, mida sa ei mõista, küsi AI-lt: "Selgita, mida see rida teeb" — või küsi õpetajalt.
+| Mitu rida koodi genereeriti? | |
+| Kas said igast reast aru? | Jah / Ei (millest mitte?) |
+| Kas AI lisas midagi, mida sa ei küsinud? | |
+| Kas vigade käsitlemine on olemas? | |
 
 ---
 
-## Osa 2: Koodi analüüs ja parandamine
+## Osa 4: Testi ja paranda
 
-### Ülesanne 1: Vigane kood
+### Samm 1: Esimene käivitamine
 
-Kopeeri see vigane Python skript ChatGPT-sse ja palu tal vead leida:
+Salvesta skript failina ja käivita. Testi erinevate sisenditega:
 
-```python
-import os
+| Test | Sisend | Oodatud tulemus | Tegelik tulemus | OK? |
+|---|---|---|---|---|
+| Normaalne | [tavaline sisend] | | | |
+| Tühi sisend | [midagi puudub] | Veateade | | |
+| Vale sisend | [vigane sisend] | Veateade | | |
 
-def check_disk_space(path)
-    total, used, free = shutil.disk_usage(path
-    print(f"Vaba ruum: {free / (1024 * 3)} GB")
-    if free < 1000000000
-        print("HOIATUS: vähe ruumi!")
-    
-check_disk_space("/")
-```
+### Samm 2: Paranda vead
 
-Esita ChatGPT-le:
+Kui midagi ei tööta, on kaks võimalust:
+
+**Variant A: Küsi AI-lt**
 
 ```text
-Selles Python skriptis on mitu viga. Leia kõik vead, 
-selgita igaüht ja anna parandatud versioon.
+Mu skript annab selle vea: [kopeeri veateade siia].
+Skript on: [kopeeri skript siia].
+Mis on valesti ja kuidas parandada?
 ```
 
-Kontrolli: kas ChatGPT leidis kõik vead? Mitu viga sa ise leidsid?
+**Variant B: Paranda ise**
 
-| Viga | Kas ChatGPT leidis? | Kas sina leidsid? |
-|---|---|---|
-| | | |
-| | | |
-| | | |
+Kui saad veast aru, proovi ise parandada. See on parim viis õppida.
 
-### Ülesanne 2: Koodi selgitamine
+### Samm 3: Täiusta
 
-Kopeeri ChatGPT-sse:
-
-```bash
-#!/bin/bash
-for ip in $(seq 1 254); do
-    ping -c 1 -W 1 192.168.1.$ip > /dev/null 2>&1 && echo "192.168.1.$ip on aktiivne"
-done
-```
-
-Küsi:
+Kui põhifunktsioon töötab, küsi AI-lt ühe täienduse lisamist:
 
 ```text
-Selgita seda skripti rida-realt. 
-Mis on selle eesmärk ja kas seda on turvaline käivitada?
+Lisa mu skriptile [uus funktsioon]. Siin on praegune skript:
+[kopeeri skript]
 ```
 
-Hinda vastust: kas selgitus on täpne? Kas turvahinnang on mõistlik?
+Näiteid täiendustest:
+
+- Lisa logifaili kirjutamine (iga käivitus salvestatakse)
+- Lisa värvid terminalväljundisse
+- Lisa ajatempel iga rea ette
+- Lisa statistika kokkuvõte lõppu
 
 ---
 
-## Osa 3: Automatiseerimisskriptid
+## Osa 5: Dokumenteeri
 
-### Ülesanne 3: Logide analüüs
+### Ülesanne: Tööriista dokumentatsioon
 
-```text
-Kirjuta Bashi skript, mis loeb /var/log/syslog faili ja 
-leiab viimase 24 tunni jooksul kõik read, kus esineb 
-sõna "error" või "failed". Sorteeri tulemused ja 
-näita mitu korda iga unikaalne veateade esines.
-Kommenteeri eesti keeles.
-```
-
-Loe genereeritud skripti ja vasta:
-
-- Kas see kasutab õigeid käske (`grep`, `sort`, `uniq`)?
-- Kas kuupäevafilter on korrektne?
-- Mida peaks muutma, et see töötaks sinu süsteemis?
-
-### Ülesanne 4: Kasutajate haldus
+Koosta oma tööriistale dokumentatsioon. See on sinu praktikumi **lõpptulemus**.
 
 ```text
-Kirjuta Bashi skript, mis loeb CSV-failist kasutajanimesid 
-(üks nimi rea kohta) ja loob iga nime jaoks Linuxi kasutajakonto. 
-Lisa turvakontroll: enne loomist kontrolli, kas kasutaja juba eksisteerib.
-Kommenteeri iga samm.
-```
+═══════════════════════════════════════════════════
+TÖÖRIISTA DOKUMENTATSIOON
+═══════════════════════════════════════════════════
 
-!!! danger "Ära käivita tootmisserveris!"
-    See skript on õppimiseks. Päris kasutajahaldust tee alati vastavalt ettevõtte poliitikale ja **testi enne** testkeskkonnas.
+NIMI: [tööriista nimi]
+AUTOR: [sinu nimi]
+KUUPÄEV: [kuupäev]
+KEEL: [Bash / Python]
+
+───────────────────────────────────────────────────
+KIRJELDUS:
+[Mida tööriist teeb, 2-3 lauset]
+
+───────────────────────────────────────────────────
+KASUTAMINE:
+[Kuidas käivitada, näide käsurealt]
+
+Näide:
+$ [käsk]
+[oodatud väljund]
+
+───────────────────────────────────────────────────
+NÕUDED:
+- OS: [milline operatsioonisüsteem]
+- Vajalikud programmid: [nt Python 3, curl, jne]
+
+───────────────────────────────────────────────────
+KOOD:
+[kopeeri lõplik skript siia]
+
+───────────────────────────────────────────────────
+TEADAOLEVAD PIIRANGUD:
+- [mida tööriist EI tee]
+- [millal võib ebaõnnestuda]
+
+───────────────────────────────────────────────────
+ARENDUSPROTSESS:
+- Mitu AI prompti läks vaja: [arv]
+- Mitu viga tuli parandada: [arv]
+- Kas AI kood töötas kohe? [Jah / Ei]
+- Mis oli kõige raskem: [...]
+═══════════════════════════════════════════════════
+```
 
 ---
 
-## Osa 4: Iteratiivne arendamine
+## Osa 6: Analüüs
 
-### Ülesanne 5: Skripti täiustamine
+Vasta lõpetuseks:
 
-Võta Osa 1 veebilehe kontrollimise skript ja täiusta seda samm-sammult:
+1. **Kas AI-genereeritud kood töötas kohe?** Kui ei, siis millised vead esinesid?
+2. **Kas sa oleksid selle skripti suutnud ise kirjutada?** Kui ei, siis mis oli uus?
+3. **Kas sa usaldaksid seda skripti tootmisserveris?** Miks? Miks mitte?
+4. **Millal on AI koodi genereerimine kasulik ja millal ohtlik?**
 
-**Samm 1:** küsi ChatGPT-lt:
-
-```text
-Lisa eelmisele skriptile funktsioon, mis kontrollib mitu 
-veebilehte korraga (loeb URL-id failist).
-```
-
-**Samm 2:**
-
-```text
-Lisa nüüd logifaili kirjutamine — iga kontroll salvestatakse 
-faili koos kuupäeva ja tulemusega.
-```
-
-**Samm 3:**
-
-```text
-Lisa e-posti teavitus, kui mõni sait ei vasta.
-```
-
-Pane tähele: iga samm ehitab eelmisele peale. See on **iteratiivne arendamine** — sama lähenemine, mida kasutavad päris arendajad.
-
----
-
-## Osa 5: Piiride testimine
-
-### Ülesanne 6: Kus AI eksib?
-
-Proovi järgmisi päringuid ja hinda, kui hästi ChatGPT hakkama saab:
-
-**Lihtne (peaks töötama):**
-
-```text
-Kirjuta Bashi üherealine, mis leiab kõik .log failid, 
-mis on suuremad kui 100MB.
-```
-
-**Keskmine (võib vajada parandamist):**
-
-```text
-Kirjuta PowerShelli skript, mis inventeerib kõik Active Directory 
-kasutajad, kelle parool aegub järgmise 7 päeva jooksul.
-```
-
-**Keeruline (tõenäoliselt vajab parandamist):**
-
-```text
-Kirjuta Ansible playbook, mis seadistab Nginx reverse proxy 
-kahe backend serveriga ja Let's Encrypt sertifikaadiga.
-```
-
-Täida tabel:
-
-| Päring | Kas kood töötab otse? | Mitu parandust vajab? | Mis tüüpi vead? |
-|---|---|---|---|
-| Lihtne | | | |
-| Keskmine | | | |
-| Keeruline | | | |
-
-!!! tip "Reegel"
-    Mida keerulisem ülesanne, seda tõenäolisem, et AI-genereeritud kood vajab käsitsi parandamist. Lihtsa skripti puhul töötab sageli otse; keerulise infrastruktuuri puhul on see pigem **alguspunkt**, mitte valmis lahendus.
-
----
-
-## Osa 6: Dokumenteerimine
-
-### Ülesanne 7: Koodi dokumenteerimine
-
-Võta üks oma varasematest skriptidest (ilma kommentaarideta) ja palu ChatGPT-l dokumenteerida:
-
-```text
-Lisa sellele skriptile:
-1. Päise kommentaar (autor, kuupäev, eesmärk)
-2. Iga funktsiooni kirjeldus
-3. README.md fail kasutamisjuhendiga
-```
-
-Hinda: kas genereeritud dokumentatsioon on piisav, et keegi teine saaks skripti kasutada?
+!!! warning "Oluline õppetund"
+    AI on hea **alguspunkt** — ta genereerib kiiresti midagi, mis töötab lihtsal juhul. Aga päris tootmiskõlblik kood vajab alati inimese kontrolli: turvalisus, veakäsitlus, äärjuhud, jõudlus. Mida keerulisem ülesanne, seda rohkem tuleb ise mõelda.
 
 ---
 
@@ -229,9 +246,9 @@ Hinda: kas genereeritud dokumentatsioon on piisav, et keegi teine saaks skripti 
 
 Selles praktikumis sa:
 
-- Genereerisid AI abil töötava Bashi skripti ja testisid seda
-- Lasid AI-l vigast koodi analüüsida ja parandada
-- Lõid automatiseerimisskripte IT-halduse jaoks
-- Kogesid iteratiivset arendamist — skripti samm-sammulist täiustamist
-- Testisid AI piire eri keerukusastmega ülesannetega
-- Kasutasid AI-d koodi dokumenteerimiseks
+- Valisid ja spetsifitseerisid oma IT-tööriista
+- Kasutasid AI-d koodi genereerimiseks ja vigade parandamiseks
+- Testisid skripti erinevate sisenditega
+- Täiendasid tööriista samm-sammult
+- Dokumenteerisid tulemuse nii, et keegi teine saaks seda kasutada
+- Analüüsisid AI-koodi genereerimise tugevusi ja nõrkusi

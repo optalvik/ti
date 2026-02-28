@@ -74,7 +74,8 @@ Transformeri kiirus tuli sellest, et kogu sisendteksti saab töödelda paralleel
     ??? tip "Vihje"
         Mõtle sellele, KUI palju teksti mudel on näinud. Kui sa oleksid lugenud *kogu* interneti, kõik raamatud ja kogu StackOverflow — kas sa suudaksid ka "lihtsalt" järgmist sõna ennustades midagi tarka öelda?
 
-    ✅ **Vastus:** See on mastaabi küsimus. Kui mudel on triljoneid sõnu analüüsinud, sisaldavad need statistilised mustrid ka loogikat, koodi struktuure ja matemaatilist arutlust. Mudel ei "mõista" neid — aga ta on õppinud reprodutseerima mustreid, mis *näevad välja* nagu mõistmine. See ongi AI tugevus ja nõrkus korraga: mõnikord tulemused on geniaalsed, mõnikord on geniaalselt valesti.
+    ??? success "Vastus"
+        See on mastaabi küsimus. Kui mudel on triljoneid sõnu analüüsinud, sisaldavad need statistilised mustrid ka loogikat, koodi struktuure ja matemaatilist arutlust. Mudel ei "mõista" neid — aga ta on õppinud reprodutseerima mustreid, mis *näevad välja* nagu mõistmine. See ongi AI tugevus ja nõrkus korraga: mõnikord tulemused on geniaalsed, mõnikord on geniaalselt valesti.
 
 ## Tokeniseerimine
 
@@ -168,7 +169,8 @@ LLM-id on halvad matemaatikas. Nad genereerivad teksti, mitte ei arvuta. Lihtne 
     ??? tip "Vihje"
         Mõtle: miks teeb AI head tõlget, aga autonoomne auto vajab ikka veel inimjuhti? Mõlemad kasutavad närvivõrke.
 
-    ✅ **Vastus:** Tõlge on puhtalt keeleline ülesanne — siin on AI oma elemendis, sest ta on treenitud tekstil. Aga autojuhtimine nõuab füüsilise maailma *tunnetamist* — intuitiivset mõistmist, et peatunud takso taga võib olla teeületaja. AI-l puudub see bioloogiline "kehamälu". Seepärast on AI tekstitöötluses üliinimlik, aga füüsilises maailmas ebakindel.
+    ??? success "Vastus"
+        Tõlge on puhtalt keeleline ülesanne — siin on AI oma elemendis, sest ta on treenitud tekstil. Aga autojuhtimine nõuab füüsilise maailma *tunnetamist* — intuitiivset mõistmist, et peatunud takso taga võib olla teeületaja. AI-l puudub see bioloogiline "kehamälu". Seepärast on AI tekstitöötluses üliinimlik, aga füüsilises maailmas ebakindel.
 
 ---
 
@@ -208,31 +210,36 @@ Suured keelemudelid (LLM) on ehitatud Transformer-arhitektuuril, mille võti on 
     ??? tip "Vihje"
         Mõtle telefoni autocompletele. Mis juhtub, kui seda skaleerida miljardi korda?
 
-    ✅ **Vastus:** LLM ennustab järgmist tokenit (sõna või sõnaosa) tõenäosuse põhjal. Ta on treenimise käigus näinud triljoneid sõnu ja õppinud statistilised mustrid — milline sõna järgneb milliste sõnade järel kõige tõenäolisemalt. Ta ei "mõtle" ega "otsi fakte" — ta genereerib statistiliselt usutava jätku.
+    ??? success "Vastus"
+        LLM ennustab järgmist tokenit (sõna või sõnaosa) tõenäosuse põhjal. Ta on treenimise käigus näinud triljoneid sõnu ja õppinud statistilised mustrid — milline sõna järgneb milliste sõnade järel kõige tõenäolisemalt. Ta ei "mõtle" ega "otsi fakte" — ta genereerib statistiliselt usutava jätku.
 
 ??? question "2. Mis on tähelepanumehhanism ja miks see oluline on?"
     ??? tip "Vihje"
         Mõtle lausele: "Kass istus matil, sest ta oli väsinud." Kuidas teab masin, et "ta" viitab kassile?
 
-    ✅ **Vastus:** Tähelepanumehhanism (*self-attention*) võimaldab mudelil vaadata kõiki sõnu sisendtekstis korraga ja arvutada, kui palju iga sõna peaks "tähelepanu pöörama" igale teisele sõnale. See lahendab pikkade lausete probleemi — erinevalt varasematest RNN-idest ei kaota Transformer pika teksti algust "meelest ära." Samuti võimaldab see paralleeltöötlust GPU-del, mis tegi võimalikuks mudelite skaleerimise miljarditesse parameetritesse.
+    ??? success "Vastus"
+        Tähelepanumehhanism (*self-attention*) võimaldab mudelil vaadata kõiki sõnu sisendtekstis korraga ja arvutada, kui palju iga sõna peaks "tähelepanu pöörama" igale teisele sõnale. See lahendab pikkade lausete probleemi — erinevalt varasematest RNN-idest ei kaota Transformer pika teksti algust "meelest ära." Samuti võimaldab see paralleeltöötlust GPU-del, mis tegi võimalikuks mudelite skaleerimise miljarditesse parameetritesse.
 
 ??? question "3. Miks LLM-id hallutsineerivad?"
     ??? tip "Vihje"
         Mis on LLM-i *tegelik* ülesanne? Ta ei õpi fakte — ta õpib midagi muud.
 
-    ✅ **Vastus:** LLM ei kontrolli fakte — ta genereerib teksti, mis on statistiliselt tõenäoline. Kui küsid midagi, mille kohta mudelil on piisavalt konteksti, on vastus tihti õige. Aga kui küsid midagi spetsiifilist, haruldast või äärmuslikku, võib mudel genereerida usutavalt kõlava, kuid faktiliselt vale vastuse — sest tema eesmärk on tõenäoline jätk, mitte tõene jätk.
+    ??? success "Vastus"
+        LLM ei kontrolli fakte — ta genereerib teksti, mis on statistiliselt tõenäoline. Kui küsid midagi, mille kohta mudelil on piisavalt konteksti, on vastus tihti õige. Aga kui küsid midagi spetsiifilist, haruldast või äärmuslikku, võib mudel genereerida usutavalt kõlava, kuid faktiliselt vale vastuse — sest tema eesmärk on tõenäoline jätk, mitte tõene jätk.
 
 ??? question "4. Miks on tokenite mõistmine praktiline?"
     ??? tip "Vihje"
         Mõtle API arve peale. Mis ühik seal on?
 
-    ✅ **Vastus:** Tokenite arv määrab kaks praktilist asja: (1) kui palju teksti LLM korraga "näeb" (kontekstiaken) ja (2) kui palju API päring maksab (hind arvutatakse tokenite järgi). Eesti keeles kulub rohkem tokeneid kui inglise keeles, sest morfoloogia on keerukam — iga sõnavorm tokeniseeritakse eraldi tükkideks.
+    ??? success "Vastus"
+        Tokenite arv määrab kaks praktilist asja: (1) kui palju teksti LLM korraga "näeb" (kontekstiaken) ja (2) kui palju API päring maksab (hind arvutatakse tokenite järgi). Eesti keeles kulub rohkem tokeneid kui inglise keeles, sest morfoloogia on keerukam — iga sõnavorm tokeniseeritakse eraldi tükkideks.
 
 ??? question "5. Mis vahe on eeltreenimisel ja peenhäälestamisel?"
     ??? tip "Vihje"
         Mõtle analoogiale: eeltreenimine = raamatute lugemine. Peenhäälestamine = ???
 
-    ✅ **Vastus:** Eeltreenimisel antakse mudelile hiigelsuur tekstikorpus (sajad miljardid sõnad internetist) ja ta õpib ennustama järgmist tokenit. Tulemus on "tark, aga metsik" mudel. Peenhäälestamisel treenitakse mudelit väiksemal, kvaliteetsemal andmekogumisel (näidisvestlused), et ta õpiks olema kasulik ja viisakas. RLHF-iga lisatakse inimhindajate tagasiside, et mudel eelistaks paremaid vastuseid.
+    ??? success "Vastus"
+        Eeltreenimisel antakse mudelile hiigelsuur tekstikorpus (sajad miljardid sõnad internetist) ja ta õpib ennustama järgmist tokenit. Tulemus on "tark, aga metsik" mudel. Peenhäälestamisel treenitakse mudelit väiksemal, kvaliteetsemal andmekogumisel (näidisvestlused), et ta õpiks olema kasulik ja viisakas. RLHF-iga lisatakse inimhindajate tagasiside, et mudel eelistaks paremaid vastuseid.
 
 [^llm_survey]: Zhao, W. X. et al. (2023). *A Survey of Large Language Models*. arXiv:2303.18223. https://arxiv.org/abs/2303.18223
 [^transformer]: Vaswani, A. et al. (2017). Attention Is All You Need. *Advances in Neural Information Processing Systems*, 30. https://arxiv.org/abs/1706.03762

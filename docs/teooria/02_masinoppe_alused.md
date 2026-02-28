@@ -35,16 +35,17 @@ flowchart LR
     style C fill:#ff9100,color:#fff
 ```
 
-  <figcaption>Joonis 2.1. Traditsiooniline programmeerimine vs masinõpe — loogika on pööratud (Talvik, 2026).</figcaption>
+  <figcaption>Joonis 2.2. Traditsiooniline programmeerimine vs masinõpe — loogika on pööratud (Talvik, 2025).</figcaption>
 </figure>
 
 ??? question "🤔 Mõtle kaasa"
     Kujuta ette, et pead kirjutama programmi, mis eristab rämpsposti tavalisest e-kirjast. Proovi sõnastada 5 reeglit, mille järgi sa ise rämpsposti ära tunned. Kas need reeglid katavad kõik juhtumid?
 
     ??? tip "Vihje"
-        Mõtle: "sisaldab sõna VIAGRA" — aga mis siis, kui rämps kasutab kirjapilti "V1AGRA"? "Palju suurtähti" — aga mis siis, kui see on lihtsalt kolleegi entusiastlik kiri?
+        Mõtle: "sisaldab sõna TASUTA" — aga mis siis, kui rämps kasutab kirjapilti "T4SUTA"? "Palju suurtähti" — aga mis siis, kui see on lihtsalt kolleegi entusiastlik kiri?
 
-    ✅ **Vastus:** Reeglipõhine lähenemine jookseb kiiresti ummikusse, sest rämpsposti saatjad kohanduvad pidevalt. Masinõpe lahendab selle, sest mudel vaatab tuhandeid näiteid ja leiab mustreid, mida sa ei suudaks käsitsi sõnastada — kaasa arvatud mustrid, mis hõlmavad sadu tunnuseid korraga.
+    ??? success "Vastus"
+        Reeglipõhine lähenemine jookseb kiiresti ummikusse, sest rämpsposti saatjad kohanduvad pidevalt. Masinõpe lahendab selle, sest mudel vaatab tuhandeid näiteid ja leiab mustreid, mida sa ei suudaks käsitsi sõnastada — kaasa arvatud mustrid, mis hõlmavad sadu tunnuseid korraga.
 
 ## Kolm masinõppe tüüpi
 
@@ -57,7 +58,7 @@ Kõige levinum tüüp. Masinale antakse näited koos õigete vastustega — näi
 Kaks ülesandetüüpi:
 
 - **Klassifitseerimine** — vastus on kategooria. Kas see e-kiri on rämps? Kas see nahapilt on healoomuline?
-- **Regressioon** — vastus on number. Kui palju maksab see korter? Kui suur on serveri koormus homme kell 14?
+- **Regressioon** — vastus on arv. Kui palju maksab see korter? Kui suur on serveri koormus homme kell 14?
 
 ### Juhendamata õpe (*Unsupervised Learning*)
 
@@ -83,7 +84,7 @@ Agent tegutseb keskkonnas, saab tagasisidet (preemia või karistus) ja õpib kat
 
 ## Kuidas masin tegelikult õpib?
 
-Treenimisprotsess on olemuselt hiiglaslik vigade parandamise tsükkel. Kujuta ette, et masinale näidatakse "Sõja ja rahu" poolikut lauset ja palutakse ennustada järgmist sõna. Kui mudel eksib, muudetakse matemaatiliselt tema siseseid seoseid ehk kaalusid, et järgmisel korral oleks tõenäosus õigesti vastata suurem. See operatsioon kordub triljoneid kordi.
+Treenimisprotsess on olemuselt hiiglaslik vigade parandamise tsükkel. Kujuta ette, et masinale näidatakse "Sõja ja rahu" poolikut lauset ja palutakse ennustada järgmist sõna. Kui mudel eksib, muudetakse matemaatiliselt tema sisemisi seoseid ehk kaalusid, et järgmisel korral oleks tõenäosus õigesti vastata suurem. See operatsioon kordub triljoneid kordi.
 
 ### Samm 1: Andmete ettevalmistamine
 
@@ -114,7 +115,7 @@ flowchart TD
     style E fill:#ff9100,color:#fff
 ```
 
-  <figcaption>Joonis 2.2. Masinõppe treeningtsükkel (Talvik, 2026).</figcaption>
+  <figcaption>Joonis 2.3. Masinõppe treeningtsükkel (Talvik, 2025).</figcaption>
 </figure>
 
 ### Samm 3: Hindamine
@@ -131,7 +132,8 @@ Peamised mõõdikud:
     ??? tip "Vihje"
         Mõtle tagajärgedele. Mis juhtub, kui rämpsposti filter laseb rämpskirja läbi? Mis juhtub, kui vähidiagnoos jääb märkamata?
 
-    ✅ **Vastus:** Vähidiagnoosis on olulisem *tundlikkus* — sa tahad, et KÕIK haigusjuhtumid leitakse üles, isegi kui mõned terved inimesed saavad valepositiivse tulemuse (neid saab edasi uurida). Rämpsposti puhul on mõlemad olulised, aga vale-positiivne on eriti halb — oluline kiri rämpsposti kaustas võib tähendada kaotatud äritehingut.
+    ??? success "Vastus"
+        Vähidiagnoosis on olulisem *tundlikkus* — sa tahad, et KÕIK haigusjuhtumid leitakse üles, isegi kui mõned terved inimesed saavad valepositiivse tulemuse (neid saab edasi uurida). Rämpsposti puhul on mõlemad olulised, aga vale-positiivne on eriti halb — oluline kiri rämpsposti kaustas võib tähendada kaotatud äritehingut.
 
 ## Ülesobitumine ja alasobitumine
 
@@ -169,7 +171,7 @@ Siin pole eesmärk iga algoritmi matemaatiliselt selgeks saada, vaid mõista, mi
 
 **Juhuslik mets** (*Random Forest*) — palju otsustuspuid, mis hääletavad. Täpsem kui üksik puu.
 
-**Närvivõrgud** (*Neural Networks*) — kihilised struktuurid, kus iga neuron võtab sisendid, korrutab kaaludega ja annab väljundi. Sügavad närvivõrgud on tänase AI alus — nendest ptk 3.
+**Närvivõrgud** (*Neural Networks*) — kihilised struktuurid, kus iga neuron võtab sisendid, korrutab kaaludega ja annab väljundi. Sügavad närvivõrgud on tänase AI alus — nendest peatükis 3.
 
 | Algoritm | Tüüp | Tugevus | Nõrkus |
 |---|---|---|---|
@@ -219,30 +221,35 @@ Masinõpe erineb traditsioonilisest programmeerimisest: reeglid avastab masin an
     ??? tip "Vihje"
         Mõtle suunale: traditsiooniline = sisend + reeglid → väljund. Masinõpe = sisend + ??? → reeglid.
 
-    ✅ **Vastus:** Traditsioonilises programmeerimises kirjutab arendaja reeglid käsitsi (sisend + reeglid → väljund). Masinõppes antakse masinale näited koos vastustega ja masin avastab reeglid ise (sisend + vastused → reeglid). Loogika on pööratud.
+    ??? success "Vastus"
+        Traditsioonilises programmeerimises kirjutab arendaja reeglid käsitsi (sisend + reeglid → väljund). Masinõppes antakse masinale näited koos vastustega ja masin avastab reeglid ise (sisend + vastused → reeglid). Loogika on pööratud.
 
 ??? question "2. Millisel juhul kasutaksid juhendatud ja millisel juhendamata õpet?"
     ??? tip "Vihje"
         Võtmeküsimus: kas sul *on* õiged vastused olemas või ei ole?
 
-    ✅ **Vastus:** Juhendatud õpet kasutad, kui sul on märgistatud andmed (nt e-kirjad märgistatud "rämps"/"tavaline"). Juhendamata õpet kasutad, kui õigeid vastuseid pole, aga tahad leida struktuuri — näiteks grupeerida kliente käitumise järgi või tuvastada anomaaliaid.
+    ??? success "Vastus"
+        Juhendatud õpet kasutad, kui sul on märgistatud andmed (nt e-kirjad märgistatud "rämps"/"tavaline"). Juhendamata õpet kasutad, kui õigeid vastuseid pole, aga tahad leida struktuuri — näiteks grupeerida kliente käitumise järgi või tuvastada anomaaliaid.
 
 ??? question "3. Mis on ülesobitumine ja kuidas seda ära tunda?"
     ??? tip "Vihje"
         Mõtle kontrolltöö analoogiale: mis juhtub, kui õpid vastused pähe, aga ei mõista teemat?
 
-    ✅ **Vastus:** Ülesobitumine: mudel on treenimisandmed pähe õppinud, sealhulgas müra. Tunneb ära: treenimisandmetel väga kõrge täpsus (99%), aga testiandmetel oluliselt madalam (60%). Mudel ei üldista.
+    ??? success "Vastus"
+        Ülesobitumine: mudel on treenimisandmed pähe õppinud, sealhulgas müra. Tunneb ära: treenimisandmetel väga kõrge täpsus (99%), aga testiandmetel oluliselt madalam (60%). Mudel ei üldista.
 
 ??? question "4. Miks jagatakse andmed kolmeks?"
     ??? tip "Vihje"
         Mõtle: kui kasutad samu andmeid nii õppimiseks kui hindamiseks, siis kas hinne on aus?
 
-    ✅ **Vastus:** Treenimisandmed — mudeli õppimiseks. Valideerimisandmed — parameetrite häälestamiseks treenimise ajal. Testiandmed — aus lõpphindamine andmetega, mida mudel pole kunagi näinud. Ilma eraldamata poleks võimalik teada, kuidas mudel päris maailmas toimib.
+    ??? success "Vastus"
+        Treenimisandmed — mudeli õppimiseks. Valideerimisandmed — parameetrite häälestamiseks treenimise ajal. Testiandmed — aus lõpphindamine andmetega, mida mudel pole kunagi näinud. Ilma eraldamata poleks võimalik teada, kuidas mudel päris maailmas toimib.
 
 ??? question "5. Millal kasutaksid otsustuspuud ja millal närvivõrku?"
     ??? tip "Vihje"
         Mõtle: kas sa pead suutma kliendile *selgitada*, miks otsus tehti?
 
-    ✅ **Vastus:** Otsustuspuud kasutad, kui tõlgendatavus on oluline — näiteks laenuotsuse selgitamine kliendile. Närvivõrku kasutad, kui andmeid on palju, ülesanne on keerukas (pildituvastus, keeletöötlus) ja tõlgendatavus pole esmatähtis.
+    ??? success "Vastus"
+        Otsustuspuud kasutad, kui tõlgendatavus on oluline — näiteks laenuotsuse selgitamine kliendile. Närvivõrku kasutad, kui andmeid on palju, ülesanne on keerukas (pildituvastus, keeletöötlus) ja tõlgendatavus pole esmatähtis.
 
 [^bishop]: Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*. Springer. https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/

@@ -3,110 +3,172 @@ tags:
   - Praktikum
 ---
 
-# Praktikum 1: Esimene vestlus AI-ga
+# Praktikum 1: Loo oma AI-abiline
 
-Selles praktikumis tutvud kahe AI vestlusrobotiga — ChatGPT ja Claude. Esitad mõlemale sama küsimuse, võrdled vastuseid ja õpid hindama, milline vastus on parem ja miks.
+Selles praktikumis lood endale AI-abilise, kes aitab sind konkreetse IT-ülesandega. Sa ei võrdle lihtsalt kahte tööriista — sa **ehitad** midagi, mida saad päriselt kasutada.
 
-!!! info "Vajalikud kontod"
-    - **ChatGPT:** kooli konto (OpenAI Edu litsents) või tasuta konto aadressil [chat.openai.com](https://chat.openai.com)
-    - **Claude:** tasuta konto aadressil [claude.ai](https://claude.ai)
+!!! abstract "Eesmärgid"
+    Selle praktikumi lõpuks:
 
----
+    - Oskad AI-ga vestlust alustada ja suunata
+    - Tead, kuidas kontekst ja juhised mõjutavad vastust
+    - Oled loonud isikliku AI-abilise, mida saad edaspidi kasutada
 
-## Osa 1: ChatGPT
+!!! info "Vajalik konto"
+    - **ChatGPT:** [chat.openai.com](https://chat.openai.com) (kooli konto või tasuta)
+    - **Claude:** [claude.ai](https://claude.ai) (tasuta konto)
 
-### Samm 1: Logi sisse
-
-Ava brauser ja mine aadressile [chat.openai.com](https://chat.openai.com). Logi sisse kooli kontoga. Kui kontot pole, saad luua tasuta konto oma e-posti aadressiga.
-
-### Samm 2: Esimene küsimus
-
-Kirjuta vestlusaknasse:
-
-```text
-Selgita lihtsalt, mis on IP-aadress. Vasta eesti keeles, maksimaalselt 5 lausega.
-```
-
-Loe vastust. Pane tähele:
-
-- Kas vastus on eesti keeles?
-- Kas see on arusaadav?
-- Kas see on maksimaalselt 5 lauset, nagu palusid?
-
-### Samm 3: Järelküsimus
-
-Kirjuta samasse vestlusesse:
-
-```text
-Anna mulle kolm näidet, kus IP-aadressi teadmine on kasulik igapäevatöös.
-```
-
-Pane tähele: ChatGPT mäletab eelmist küsimust — ta teab, et räägite IP-aadressidest. See on **konteksti** säilitamine vestluse jooksul.
-
-### Samm 4: Salvesta vastus
-
-Kopeeri ChatGPT vastused teksti- või dokumendifaili. Neid läheb vaja Osa 3 võrdluses.
+    Vali üks neist — kasutad seda kogu praktikumi jooksul.
 
 ---
 
-## Osa 2: Claude
+## Osa 1: Vali oma abilise roll
 
-### Samm 1: Logi sisse
+Sinu ülesanne on luua AI-abiline, kes aitab sind ühe konkreetse asjaga. Vali üks järgmistest rollidest (või paku ise):
 
-Ava uus brauseri tab ja mine aadressile [claude.ai](https://claude.ai). Loo tasuta konto, kui sul seda veel pole.
+| Roll | Mida ta teeb |
+|---|---|
+| **IT tugiisik** | Aitab diagnoosida ja lahendada levinud IT-probleeme |
+| **Õpiabi** | Selgitab IT-mõisteid, koostab kordamisküsimusi, kontrollib su teadmisi |
+| **Skriptikirjutaja** | Aitab kirjutada ja selgitada Bashi/Pythoni skripte |
+| **Küberturbespetsialist** | Analüüsib turvariske ja soovitab kaitsemeetmeid |
 
-### Samm 2: Sama küsimus
-
-Kirjuta Claude'ile **täpselt sama küsimus**:
-
-```text
-Selgita lihtsalt, mis on IP-aadress. Vasta eesti keeles, maksimaalselt 5 lausega.
-```
-
-### Samm 3: Sama järelküsimus
-
-```text
-Anna mulle kolm näidet, kus IP-aadressi teadmine on kasulik igapäevatöös.
-```
-
-### Samm 4: Salvesta vastus
-
-Kopeeri ka Claude'i vastused samasse dokumenti.
+Kirjuta oma valik üles. Seda rolli hakkad nüüd ehitama.
 
 ---
 
-## Osa 3: Võrdlus
+## Osa 2: Esimene katse
 
-Nüüd sul on mõlema AI vastused kõrvuti. Täida järgmine tabel:
+### Samm 1: Lihtne algus
 
-| Kriteerium | ChatGPT | Claude | Kumb parem? |
+Kirjuta AI-le lihtne küsimus, mis on seotud sinu valitud rolliga. Näiteks:
+
+- IT tugiisik: *"Kasutaja ütleb, et printer ei prindi. Mida teha?"*
+- Õpiabi: *"Selgita mulle, mis on DNS."*
+- Skriptikirjutaja: *"Kirjuta skript, mis kontrollib kettaruumi."*
+
+### Samm 2: Hinda vastust
+
+Loe vastus läbi ja mõtle:
+
+- Kas vastus on sinu tasemele sobiv? (Liiga lihtne? Liiga keeruline?)
+- Kas see on piisavalt konkreetne?
+- Kas formaat on mugav? (Liiga pikk? Liiga lühike?)
+
+Pane oma tähelepanekud kirja — neid läheb järgmises osas vaja.
+
+---
+
+## Osa 3: Ehita abiline üles
+
+Nüüd hakkad oma abilist **täiustama**. Kopeeri järgmine mall ja täida oma rolliga:
+
+```text
+ROLL: Sa oled [sinu valitud roll].
+
+STIIL: [Kuidas ta peaks vastama? Näiteks: "Selgita lihtsalt,
+kasuta igapäevaseid näiteid" või "Ole konkreetne ja tehniline"]
+
+FORMAAT: [Kuidas vastus peaks välja nägema? Näiteks:
+"Nummerdatud sammud, iga samm max 2 lauset" või
+"Esmalt lühike selgitus, siis näide"]
+
+PIIRANGUD: [Mida ta EI tohiks teha? Näiteks:
+"Ära kasuta ingliskeelseid termineid ilma selgituseta" või
+"Ära anna vastust, mis on pikem kui 200 sõna"]
+```
+
+### Näide: IT tugiisik
+
+```text
+ROLL: Sa oled kogenud IT-tugiisik, kes aitab algajat kolleegi.
+
+STIIL: Selgita lihtsalt, kasuta samm-sammulisi juhiseid.
+Kui on mitu võimalikku põhjust, alusta kõige levinumast.
+
+FORMAAT: Esmalt lühike diagnoos (1-2 lauset), seejärel
+nummerdatud sammud lahenduseks. Maksimaalselt 8 sammu.
+
+PIIRANGUD: Ära eelda, et kasutaja on tehniline.
+Ära soovita midagi, mis võib andmeid kaotada, ilma hoiatamata.
+```
+
+Saada oma mall AI-le ja esita seejärel sama küsimus, mille esitasid Osa 2-s. Kas vastus on nüüd parem?
+
+---
+
+## Osa 4: Testi ja paranda
+
+### Samm 1: Kolm testküsimust
+
+Esita oma abilisele kolm erinevat küsimust, mis sobivad tema rolliga. Testi eri raskusastmeid:
+
+1. **Lihtne küsimus** — midagi, mida sa juba tead (kontrollid, kas abiline vastab õigesti)
+2. **Keskmine küsimus** — midagi, mille kohta tahad rohkem teada
+3. **Keeruline küsimus** — midagi, mis nõuab põhjalikumat analüüsi
+
+### Samm 2: Hinda tulemusi
+
+Täida tabel:
+
+| Küsimus | Kas vastus on õige? | Kas formaat sobib? | Mida muuta? |
 |---|---|---|---|
-| Kas vastus on eesti keeles? | | | |
-| Kas vastus on ≤5 lauset? | | | |
-| Kas selgitus on arusaadav? | | | |
-| Kas näited on praktilised? | | | |
-| Kas vastuses on vigu? | | | |
+| Lihtne: | | | |
+| Keskmine: | | | |
+| Keeruline: | | | |
 
-### Arutelu
+### Samm 3: Paranda malli
 
-Vasta järgmistele küsimustele (kirjuta vastused oma dokumenti):
+Muuda oma malli vastavalt tulemustele. Näiteks:
 
-1. Kas mõlemad AI-d järgisid sinu juhist (5 lauset, eesti keel)?
-2. Kas vastused on identsed või erinevad? Miks nad erinevad?
-3. Kas mõlemas vastuses oli midagi valesti? Kuidas sa seda kontrollisid?
+- Kui vastused olid liiga pikad → lisa piirang sõnade arvule
+- Kui vastused olid liiga üldised → lisa kontekst (nt "meie koolis on Windows arvutid")
+- Kui formaat ei sobinud → muuda formaadijuhist
+
+Testi uuesti. **Korda seda protsessi**, kuni oled tulemusega rahul.
+
+!!! tip "Iteratsioon on normaalne"
+    Harva saab esimene versioon täiuslik. Päris prompt engineering ongi katsetamine: muuda üht asja korraga, testi, vaata tulemust. Täpselt nagu koodi debuggimine.
+
+---
+
+## Osa 5: Dokumenteeri oma abiline
+
+Koosta oma abilise kohta lühike **dokumentatsioon**. See on sinu praktikumi lõpptulemus.
+
+Täida järgmine mall oma dokumendifaili:
+
+```
+═══════════════════════════════════════
+MINU AI-ABILINE
+═══════════════════════════════════════
+
+Nimi: [anna oma abilisele nimi]
+Roll: [mida ta teeb]
+Tööriist: [ChatGPT / Claude]
+
+PROMPT (kopeeri siia oma lõplik mall):
+---
+[sinu prompt siia]
+---
+
+NÄIDISVESTLUS:
+Küsimus: [üks hea näide]
+Vastus: [AI vastus sellele]
+
+MIS TÖÖTAB HÄSTI:
+- [punkt 1]
+- [punkt 2]
+
+MIDA TULEKS VEEL PARANDADA:
+- [punkt 1]
+
+MITU ITERATSIOONI LÄKSIN LÄBI: [arv]
+═══════════════════════════════════════
+```
 
 !!! warning "3K kontroll"
-    Sa just **kasutasid** AI-d (K1), nüüd **kahtlusta** (K2) — kas vastus on õige? Ava Google ja **kontrolli** (K3) vähemalt ühte fakti, mida AI väitis. Kirjuta üles, mida kontrollisid ja kas fakt oli õige.
-
----
-
-## Osa 4: Proovi ise
-
-Vali üks järgmistest ülesannetest ja esita see **mõlemale** AI-le. Võrdle vastuseid.
-
-1. "Mis vahe on WiFi-l ja Ethernet-il? Selgita nii, et mu vanaema saaks aru."
-2. "Kirjuta 5 sammu, kuidas turvaliselt avalikus WiFi-võrgus surfata."
-3. "Mis juhtub, kui ma kirjutan brauserisse www.google.com ja vajutan Enter? Selgita samm-sammult."
+    Enne lõpetamist tee kiire kontroll: sa **kasutasid** AI-d (K1) — nüüd **kahtlusta** (K2): kas abilise vastused on alati õiged? Testi ühe küsimusega, mille vastust sa kindlalt tead, ja **kontrolli** (K3), kas AI vastas õigesti.
 
 ---
 
@@ -114,7 +176,10 @@ Vali üks järgmistest ülesannetest ja esita see **mõlemale** AI-le. Võrdle v
 
 Selles praktikumis sa:
 
-- Tegid esimesed päringud ChatGPT-le ja Claude'ile
-- Õppisid, et sama küsimus annab erinevatel AI-del erineva vastuse
-- Võrdlesid vastuste kvaliteeti konkreetsete kriteeriumide alusel
-- Rakendasid esimest korda 3K meetodit: kasutasid → kahtlustasid → kontrollisid
+- Lõid isikliku AI-abilise konkreetse IT-ülesande jaoks
+- Õppisid, kuidas roll, stiil, formaat ja piirangud mõjutavad AI vastust
+- Kogesid iteratiivset protsessi: loo → testi → paranda → korda
+- Dokumenteerisid oma tulemuse nii, et saad seda edaspidi kasutada
+
+!!! success "Boonusülesanne"
+    Vaheta klassikaaslasega abilised — saada talle oma prompt ja proovi tema oma. Kas sinu abiline töötab ka kellegi teise jaoks? Mida peaks muutma?

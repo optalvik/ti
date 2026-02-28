@@ -3,7 +3,7 @@ tags:
   - AI
 ---
 
-# 0. Kuidas selle kursusega töötada
+# Kuidas selle kursusega töötada
 
 !!! abstract "Eesmärgid"
     - Mõistad, miks see kursus julgustab AI kasutamist, aga nõuab kriitilist mõtlemist

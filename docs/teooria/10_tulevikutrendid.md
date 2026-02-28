@@ -111,16 +111,21 @@ AI areneb kiiresti kolmes suunas: multimodaalsus (tekst + pilt + heli + video), 
 ## Enesekontroll
 
 ??? question "1. Nimeta kolm peamist AI arengusuunda ja selgita igaühe mõju IT-tööle."
-    (1) Multimodaalsus — AI suudab töödelda teksti, pilte, heli ja videot korraga, mis teeb selle kasulikumaks reaalsetes olukordades (pildista veateade, laadi üles PDF). (2) Väikesed mudelid — efektiivsed mudelid, mis jooksevad lokaalses masinas, tagades privaatsuse ja sõltumatuse pilvetteenustest. (3) Agentlik AI — süsteemid, mis planeerivad, kasutavad tööriistu ja itereerivad iseseisvalt, automatiseerides mitmeastmelisi IT-ülesandeid.
+    ??? success "Vastus"
+        (1) Multimodaalsus — AI suudab töödelda teksti, pilte, heli ja videot korraga, mis teeb selle kasulikumaks reaalsetes olukordades (pildista veateade, laadi üles PDF). (2) Väikesed mudelid — efektiivsed mudelid, mis jooksevad lokaalses masinas, tagades privaatsuse ja sõltumatuse pilvetteenustest. (3) Agentlik AI — süsteemid, mis planeerivad, kasutavad tööriistu ja itereerivad iseseisvalt, automatiseerides mitmeastmelisi IT-ülesandeid.
 
 ??? question "2. Miks ei ole ChatGPT ja Claude AGI?"
-    Neil pole maailmamõistmist, eesmärke, kogemust ega teadvust. Nad genereerivad statistiliselt tõenäolist teksti, aga ei *mõista* tegelikult midagi. Nad on treenitud ühel ülesandel (teksti genereerimine) ja suudavad seda hästi, aga ei suuda iseseisvalt õppida uusi oskusi ilma ümbertreenimiseta.
+    ??? success "Vastus"
+        Neil pole maailmamõistmist, eesmärke, kogemust ega teadvust. Nad genereerivad statistiliselt tõenäolist teksti, aga ei *mõista* tegelikult midagi. Nad on treenitud ühel ülesandel (teksti genereerimine) ja suudavad seda hästi, aga ei suuda iseseisvalt õppida uusi oskusi ilma ümbertreenimiseta.
 
 ??? question "3. Kuidas muudab AI IT-spetsialisti rolli?"
-    Rutiinne töö (skriptide kirjutamine, logide lugemine, dokumentatsioon) automatiseerub. Rõhk liigub *mida* ja *miks* küsimustele — planeerimine, arhitektuur ja otsustamine muutuvad olulisemaks. Kriitiline mõtlemine saab kriitiliseks, sest AI väljundit tuleb kontrollida. Tekivad uued rollid: AI-süsteemide haldamine, promptide optimeerimine, AI-turve.
+    ??? success "Vastus"
+        Rutiinne töö (skriptide kirjutamine, logide lugemine, dokumentatsioon) automatiseerub. Rõhk liigub *mida* ja *miks* küsimustele — planeerimine, arhitektuur ja otsustamine muutuvad olulisemaks. Kriitiline mõtlemine saab kriitiliseks, sest AI väljundit tuleb kontrollida. Tekivad uued rollid: AI-süsteemide haldamine, promptide optimeerimine, AI-turve.
 
 ??? question "4. Miks on väikesed mudelid IT-spetsialistile kasulikud?"
-    (1) Privaatsus — andmed ei lahku masinast. (2) Sõltumatus — ei vaja internetiühendust ega pilvetellimust. (3) Odavus — Ollama on tasuta, ei ole igakuist tasu. (4) Kiirus — madal latentsus, sest andmed ei liigu üle võrgu. Kui ülesanne ei nõua maailma parimat mudelit, on väike lokaalne mudel sageli praktilisem valik.
+    ??? success "Vastus"
+        (1) Privaatsus — andmed ei lahku masinast. (2) Sõltumatus — ei vaja internetiühendust ega pilvetellimust. (3) Odavus — Ollama on tasuta, ei ole igakuist tasu. (4) Kiirus — madal latentsus, sest andmed ei liigu üle võrgu. Kui ülesanne ei nõua maailma parimat mudelit, on väike lokaalne mudel sageli praktilisem valik.
 
 ??? question "5. Miks on AI-valdkonnas oluline eristada hüpet tegelikkusest?"
-    AI ajalugu (ptk 1) on täis lubadusi, mis osutusid enneaegseks — alates Dartmouthi konverentsi "ühe suve" lubadusest kuni tänapäevaste AGI ennustusteni. Ülehinnatud ootused viivad pettumusteni (AI talved), alahinnatud võimalused viivad mahajäämiseni. Pragmaatiline lähenemine — kasutada seda, mis töötab, mõista piiranguid, mitte uskuda ei lubadusi ega eitamist — on kõige tõhusam.
+    ??? success "Vastus"
+        AI ajalugu (ptk 1) on täis lubadusi, mis osutusid enneaegseks — alates Dartmouthi konverentsi "ühe suve" lubadusest kuni tänapäevaste AGI ennustusteni. Ülehinnatud ootused viivad pettumusteni (AI talved), alahinnatud võimalused viivad mahajäämiseni. Pragmaatiline lähenemine — kasutada seda, mis töötab, mõista piiranguid, mitte uskuda ei lubadusi ega eitamist — on kõige tõhusam.

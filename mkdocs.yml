@@ -126,7 +126,7 @@ nav:
   - Avaleht: index.md
   - Teooria:
     - teooria/index.md
-    - "0. Kuidas selle kursusega töötada": teooria/00_kuidas_kursusega_tootada.md
+    - "Kuidas selle kursusega töötada": teooria/00_kuidas_kursusega_tootada.md
     - "1. Sissejuhatus: mis on tehisintellekt?": teooria/01_sissejuhatus.md
     - "2. Masinõppe alused": teooria/02_masinoppe_alused.md
     - "3. Suurte keelemudelite (LLM) taust": teooria/03_llm_taust.md
@@ -139,12 +139,12 @@ nav:
     - "10. AI tulevikutrendid": teooria/10_tulevikutrendid.md
   - Praktikumid:
     - praktikumid/index.md
-    - "Praktikum 1: Vestlus LLM-iga": praktikumid/praktikum_01.md
-    - "Praktikum 2: Prompt engineering": praktikumid/praktikum_02.md
-    - "Praktikum 3: Perplexity — AI-põhine infootsing": praktikumid/praktikum_03.md
-    - "Praktikum 4: NotebookLM — allikate analüüs": praktikumid/praktikum_04.md
-    - "Praktikum 5: Teachable Machine — masinõpe brauseris": praktikumid/praktikum_05.md
-    - "Praktikum 6: ChatGPT — koodi genereerimine": praktikumid/praktikum_06.md
+    - "Praktikum 1: Loo oma AI-abiline": praktikumid/praktikum_01.md
+    - "Praktikum 2: IT Helpdesk simulaator": praktikumid/praktikum_02.md
+    - "Praktikum 3: Tehno-detektiiv": praktikumid/praktikum_03.md
+    - "Praktikum 4: Loo oma õppematerjal": praktikumid/praktikum_04.md
+    - "Praktikum 5: Masinõpe brauseris": praktikumid/praktikum_05.md
+    - "Praktikum 6: Lõpuprojekt — ehita oma IT-tööriist": praktikumid/praktikum_06.md
   - Kursuse info: kursuse_info.md
   - Allikad: allikad.md
   - Sildid: tags.md
